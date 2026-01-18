@@ -1,0 +1,528 @@
+[ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [WatchUi,2,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc"; @line = 4; @symbol_classdef = [FlowDelegate,4,6,18]; @symbol_extends<0> = [WatchUi,4,27,34]; @symbol_extends<1> = [BehaviorDelegate,4,35,51]; ]
+class FlowDelegate extends WatchUi.BehaviorDelegate {
+    [ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc"; @line = 4; ]
+    <init> {
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 8 16 ]
+        %tmp.1 = self;
+        symbol [ getView %tmp.2 8 24 31 ];
+        %tmp.2 = getv function %tmp.1 :getView;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        putv self :_view %tmp.3;
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 9 16 ]
+        symbol [ TimerState %tmp.5 9 25 35 ];
+        %tmp.5 = getv ? :TimerState;
+        symbol [ Initial %tmp.6 9 36 43 ];
+        %tmp.6 = getv %tmp.5 :Initial;
+        putv self :_state %tmp.6;
+    }
+    [ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc"; @line = 4; ]
+    static
+    <init> {
+    }
+    [ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc"; @line = 6; @position = 16; @symbol_vardef = [_timer,6,16,22]; ]
+    private
+    var _timer;
+    [ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc"; @line = 7; @position = 16; @symbol_vardef = [_time,7,16,21]; ]
+    private
+    var _time = 0;
+    [ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc"; @line = 8; @position = 16; @symbol_vardef = [_view,8,16,21]; ]
+    private
+    var _view;
+    [ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc"; @line = 9; @position = 16; @symbol_vardef = [_state,9,16,22]; ]
+    private
+    var _state;
+    [ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc"; @line = 11; @symbol_functiondef = [initialize,11,13,23]; ]
+    function initialize() as Void {
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_11_26_14_4_start:
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 12 8 ]
+        symbol [ BehaviorDelegate %tmp.2 12 8 24 ];
+        %tmp.2 = getv ? :BehaviorDelegate;
+        symbol [ initialize %tmp.3 12 25 35 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 13 8 ]
+        symbol [ Timer %tmp.7 13 21 26 ];
+        %tmp.7 = getv ? :Timer;
+        symbol [ Timer %tmp.8 13 27 32 ];
+        %tmp.8 = getv function ? %tmp.7 :Timer;
+        %tmp.4 = newc %tmp.8 ();
+        symbol [ _timer ? 13 8 14 ];
+        putv self :_timer %tmp.4;
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_11_26_14_4_stop:
+    }
+    [ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc"; @line = 16; @symbol_functiondef = [onSelect,16,13,21]; @symbol_return<0> = [Boolean,16,27,34]; ]
+    function onSelect() as Boolean {
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_16_35_44_4_start:
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 17 8 ]
+        symbol [ _state %tmp.2 17 16 22 ];
+        %tmp.2 = getv ? :_state;
+        push %tmp.2;
+        switch %tmp.2 @_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_17_8_40_8_switchStmtEnd;
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_17_8_40_8_switchStmtBegin:
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 18 12 ]
+        %tmp.3 = dup %tmp.2;
+        symbol [ TimerState %tmp.5 18 17 27 ];
+        %tmp.5 = getv ? :TimerState;
+        symbol [ BreakPaused %tmp.6 18 28 39 ];
+        %tmp.6 = getv %tmp.5 :BreakPaused;
+        %tmp.7 = getv function %tmp.3 :equals;
+        %tmp.8 = invoke %tmp.3 %tmp.7 (%tmp.6);
+        bt %tmp.8 @_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_18_12_19_25_switchCase;
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 20 12 ]
+        %tmp.9 = dup %tmp.2;
+        symbol [ TimerState %tmp.11 20 17 27 ];
+        %tmp.11 = getv ? :TimerState;
+        symbol [ Initial %tmp.12 20 28 35 ];
+        %tmp.12 = getv %tmp.11 :Initial;
+        %tmp.13 = getv function %tmp.9 :equals;
+        %tmp.14 = invoke %tmp.9 %tmp.13 (%tmp.12);
+        bt %tmp.14 @_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_20_12_23_21_switchCase;
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 24 12 ]
+        %tmp.15 = dup %tmp.2;
+        symbol [ TimerState %tmp.17 24 17 27 ];
+        %tmp.17 = getv ? :TimerState;
+        symbol [ Focus %tmp.18 24 28 33 ];
+        %tmp.18 = getv %tmp.17 :Focus;
+        %tmp.19 = getv function %tmp.15 :equals;
+        %tmp.20 = invoke %tmp.15 %tmp.19 (%tmp.18);
+        bt %tmp.20 @_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_24_12_27_21_switchCase;
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 28 12 ]
+        %tmp.21 = dup %tmp.2;
+        symbol [ TimerState %tmp.23 28 17 27 ];
+        %tmp.23 = getv ? :TimerState;
+        symbol [ FocusPaused %tmp.24 28 28 39 ];
+        %tmp.24 = getv %tmp.23 :FocusPaused;
+        %tmp.25 = getv function %tmp.21 :equals;
+        %tmp.26 = invoke %tmp.21 %tmp.25 (%tmp.24);
+        bt %tmp.26 @_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_28_12_34_21_switchCase;
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 35 12 ]
+        %tmp.27 = dup %tmp.2;
+        symbol [ TimerState %tmp.29 35 17 27 ];
+        %tmp.29 = getv ? :TimerState;
+        symbol [ Break %tmp.30 35 28 33 ];
+        %tmp.30 = getv %tmp.29 :Break;
+        %tmp.31 = getv function %tmp.27 :equals;
+        %tmp.32 = invoke %tmp.27 %tmp.31 (%tmp.30);
+        bt %tmp.32 @_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_35_12_38_21_switchCase;
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_17_8_40_8_switchStmtDefault:
+        goto @_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_17_8_40_8_defaultCodeBegin;
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_18_12_19_25_switchCase:
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 19 16 ]
+        %tmp.33 = 0;
+        symbol [ _time ? 19 16 21 ];
+        putv self :_time %tmp.33;
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_20_12_23_21_switchCase:
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 21 16 ]
+        symbol [ _timer %tmp.35 21 16 22 ];
+        %tmp.35 = getv ? :_timer;
+        symbol [ start %tmp.36 21 23 28 ];
+        %tmp.36 = getv function %tmp.35 :start;
+        %tmp.37 = self;
+        symbol [ method %tmp.38 21 29 35 ];
+        %tmp.38 = getv function %tmp.37 :method;
+        %tmp.40 = const :tickUp;
+        symbol [ tickUp %tmp.40 21 37 43 const ];
+        %tmp.41 = invoke %tmp.37 %tmp.38(%tmp.40);
+        %tmp.42 = 1000;
+        %tmp.43 = true;
+        invoke %tmp.35 %tmp.36(%tmp.41, %tmp.42, %tmp.43);
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 22 16 ]
+        symbol [ TimerState %tmp.45 22 25 35 ];
+        %tmp.45 = getv ? :TimerState;
+        symbol [ Focus %tmp.46 22 36 41 ];
+        %tmp.46 = getv %tmp.45 :Focus;
+        symbol [ _state ? 22 16 22 ];
+        putv self :_state %tmp.46;
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 23 16 ]
+        goto break @_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_17_8_40_8_switchStmtEnd;
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_24_12_27_21_switchCase:
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 25 16 ]
+        symbol [ _timer %tmp.48 25 16 22 ];
+        %tmp.48 = getv ? :_timer;
+        symbol [ stop %tmp.49 25 23 27 ];
+        %tmp.49 = getv function %tmp.48 :stop;
+        invoke %tmp.48 %tmp.49();
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 26 16 ]
+        symbol [ TimerState %tmp.51 26 25 35 ];
+        %tmp.51 = getv ? :TimerState;
+        symbol [ FocusPaused %tmp.52 26 36 47 ];
+        %tmp.52 = getv %tmp.51 :FocusPaused;
+        symbol [ _state ? 26 16 22 ];
+        putv self :_state %tmp.52;
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 27 16 ]
+        goto break @_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_17_8_40_8_switchStmtEnd;
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_28_12_34_21_switchCase:
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 29 16 ]
+        symbol [ _timer %tmp.54 29 16 22 ];
+        %tmp.54 = getv ? :_timer;
+        symbol [ stop %tmp.55 29 23 27 ];
+        %tmp.55 = getv function %tmp.54 :stop;
+        invoke %tmp.54 %tmp.55();
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 30 16 ]
+        [ "_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_17_8_40_8_switchStmtBegin" "_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_17_8_40_8_switchStmtEnd" ]
+        %break_time.1 = local;
+        symbol [ break_time %break_time.1 30 20 30 ];
+        symbol [ _time %tmp.57 30 33 38 ];
+        %tmp.57 = getv ? :_time;
+        %tmp.58 = 4;
+        %tmp.59 = div %tmp.57 %tmp.58;
+        lputv %break_time.1 %tmp.59;
+        symbol [ break_time %break_time.1 30 20 30 ];
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 31 16 ]
+        %tmp.60 = lgetv %break_time.1;
+        symbol [ break_time %tmp.60 31 24 34 ];
+        symbol [ _time ? 31 16 21 ];
+        putv self :_time %tmp.60;
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 32 16 ]
+        symbol [ _timer %tmp.62 32 16 22 ];
+        %tmp.62 = getv ? :_timer;
+        symbol [ start %tmp.63 32 23 28 ];
+        %tmp.63 = getv function %tmp.62 :start;
+        %tmp.64 = self;
+        symbol [ method %tmp.65 32 29 35 ];
+        %tmp.65 = getv function %tmp.64 :method;
+        %tmp.67 = const :tickDown;
+        symbol [ tickDown %tmp.67 32 37 45 const ];
+        %tmp.68 = invoke %tmp.64 %tmp.65(%tmp.67);
+        %tmp.69 = 1000;
+        %tmp.70 = true;
+        invoke %tmp.62 %tmp.63(%tmp.68, %tmp.69, %tmp.70);
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 33 16 ]
+        symbol [ TimerState %tmp.72 33 25 35 ];
+        %tmp.72 = getv ? :TimerState;
+        symbol [ Break %tmp.73 33 36 41 ];
+        %tmp.73 = getv %tmp.72 :Break;
+        symbol [ _state ? 33 16 22 ];
+        putv self :_state %tmp.73;
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 34 16 ]
+        goto break @_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_17_8_40_8_switchStmtEnd;
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_35_12_38_21_switchCase:
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 36 16 ]
+        symbol [ _timer %tmp.75 36 16 22 ];
+        %tmp.75 = getv ? :_timer;
+        symbol [ stop %tmp.76 36 23 27 ];
+        %tmp.76 = getv function %tmp.75 :stop;
+        invoke %tmp.75 %tmp.76();
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 37 16 ]
+        symbol [ TimerState %tmp.78 37 25 35 ];
+        %tmp.78 = getv ? :TimerState;
+        symbol [ BreakPaused %tmp.79 37 36 47 ];
+        %tmp.79 = getv %tmp.78 :BreakPaused;
+        symbol [ _state ? 37 16 22 ];
+        putv self :_state %tmp.79;
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 38 16 ]
+        goto break @_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_17_8_40_8_switchStmtEnd;
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_17_8_40_8_defaultCodeBegin:
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_17_8_40_8_switchStmtEnd:
+        pop;
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 41 8 ]
+        symbol [ _view %tmp.81 41 8 13 ];
+        %tmp.81 = getv ? :_view;
+        symbol [ set_title %tmp.82 41 14 23 ];
+        %tmp.82 = getv function %tmp.81 :set_title;
+        symbol [ _state %tmp.84 41 24 30 ];
+        %tmp.84 = getv ? :_state;
+        symbol [ toString %tmp.85 41 31 39 ];
+        %tmp.85 = getv function %tmp.84 :toString;
+        %tmp.86 = invoke %tmp.84 %tmp.85();
+        invoke %tmp.81 %tmp.82(%tmp.86);
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 42 8 ]
+        symbol [ WatchUi %tmp.87 42 8 15 ];
+        %tmp.87 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.88 42 16 29 ];
+        %tmp.88 = getv function %tmp.87 :requestUpdate;
+        invoke %tmp.87 %tmp.88();
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 43 8 ]
+        %tmp.89 = true;
+        ret %tmp.89;
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_16_35_44_4_stop:
+    }
+    [ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc"; @line = 46; @symbol_functiondef = [onBack,46,13,19]; @symbol_return<0> = [Boolean,46,25,32]; ]
+    function onBack() as Boolean {
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_46_33_62_4_start:
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 47 8 ]
+        symbol [ _state %tmp.2 47 16 22 ];
+        %tmp.2 = getv ? :_state;
+        push %tmp.2;
+        switch %tmp.2 @_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_47_8_58_8_switchStmtEnd;
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_47_8_58_8_switchStmtBegin:
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 48 12 ]
+        %tmp.3 = dup %tmp.2;
+        symbol [ TimerState %tmp.5 48 17 27 ];
+        %tmp.5 = getv ? :TimerState;
+        symbol [ FocusPaused %tmp.6 48 28 39 ];
+        %tmp.6 = getv %tmp.5 :FocusPaused;
+        %tmp.7 = getv function %tmp.3 :equals;
+        %tmp.8 = invoke %tmp.3 %tmp.7 (%tmp.6);
+        bt %tmp.8 @_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_48_12_51_21_switchCase;
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 52 12 ]
+        %tmp.9 = dup %tmp.2;
+        symbol [ TimerState %tmp.11 52 17 27 ];
+        %tmp.11 = getv ? :TimerState;
+        symbol [ BreakPaused %tmp.12 52 28 39 ];
+        %tmp.12 = getv %tmp.11 :BreakPaused;
+        %tmp.13 = getv function %tmp.9 :equals;
+        %tmp.14 = invoke %tmp.9 %tmp.13 (%tmp.12);
+        bt %tmp.14 @_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_52_12_55_21_switchCase;
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 56 12 ]
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_47_8_58_8_switchStmtDefault:
+        goto @_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_47_8_58_8_defaultCodeBegin;
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_48_12_51_21_switchCase:
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 49 16 ]
+        symbol [ _timer %tmp.16 49 16 22 ];
+        %tmp.16 = getv ? :_timer;
+        symbol [ start %tmp.17 49 23 28 ];
+        %tmp.17 = getv function %tmp.16 :start;
+        %tmp.18 = self;
+        symbol [ method %tmp.19 49 29 35 ];
+        %tmp.19 = getv function %tmp.18 :method;
+        %tmp.21 = const :tickUp;
+        symbol [ tickUp %tmp.21 49 37 43 const ];
+        %tmp.22 = invoke %tmp.18 %tmp.19(%tmp.21);
+        %tmp.23 = 1000;
+        %tmp.24 = true;
+        invoke %tmp.16 %tmp.17(%tmp.22, %tmp.23, %tmp.24);
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 50 16 ]
+        symbol [ TimerState %tmp.26 50 25 35 ];
+        %tmp.26 = getv ? :TimerState;
+        symbol [ Focus %tmp.27 50 36 41 ];
+        %tmp.27 = getv %tmp.26 :Focus;
+        symbol [ _state ? 50 16 22 ];
+        putv self :_state %tmp.27;
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 51 16 ]
+        goto break @_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_47_8_58_8_switchStmtEnd;
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_52_12_55_21_switchCase:
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 53 16 ]
+        symbol [ _timer %tmp.29 53 16 22 ];
+        %tmp.29 = getv ? :_timer;
+        symbol [ start %tmp.30 53 23 28 ];
+        %tmp.30 = getv function %tmp.29 :start;
+        %tmp.31 = self;
+        symbol [ method %tmp.32 53 29 35 ];
+        %tmp.32 = getv function %tmp.31 :method;
+        %tmp.34 = const :tickDown;
+        symbol [ tickDown %tmp.34 53 37 45 const ];
+        %tmp.35 = invoke %tmp.31 %tmp.32(%tmp.34);
+        %tmp.36 = 1000;
+        %tmp.37 = true;
+        invoke %tmp.29 %tmp.30(%tmp.35, %tmp.36, %tmp.37);
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 54 16 ]
+        symbol [ TimerState %tmp.39 54 25 35 ];
+        %tmp.39 = getv ? :TimerState;
+        symbol [ Break %tmp.40 54 36 41 ];
+        %tmp.40 = getv %tmp.39 :Break;
+        symbol [ _state ? 54 16 22 ];
+        putv self :_state %tmp.40;
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 55 16 ]
+        goto break @_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_47_8_58_8_switchStmtEnd;
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_56_12_57_29_switchCase:
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_47_8_58_8_defaultCodeBegin:
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 57 16 ]
+        symbol [ System %tmp.42 57 16 22 ];
+        %tmp.42 = getv ? :System;
+        symbol [ exit %tmp.43 57 23 27 ];
+        %tmp.43 = getv function %tmp.42 :exit;
+        invoke %tmp.42 %tmp.43();
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_47_8_58_8_switchStmtEnd:
+        pop;
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 59 8 ]
+        symbol [ _view %tmp.45 59 8 13 ];
+        %tmp.45 = getv ? :_view;
+        symbol [ set_title %tmp.46 59 14 23 ];
+        %tmp.46 = getv function %tmp.45 :set_title;
+        symbol [ _state %tmp.48 59 24 30 ];
+        %tmp.48 = getv ? :_state;
+        symbol [ toString %tmp.49 59 31 39 ];
+        %tmp.49 = getv function %tmp.48 :toString;
+        %tmp.50 = invoke %tmp.48 %tmp.49();
+        invoke %tmp.45 %tmp.46(%tmp.50);
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 60 8 ]
+        symbol [ WatchUi %tmp.51 60 8 15 ];
+        %tmp.51 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.52 60 16 29 ];
+        %tmp.52 = getv function %tmp.51 :requestUpdate;
+        invoke %tmp.51 %tmp.52();
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 61 8 ]
+        %tmp.53 = true;
+        ret %tmp.53;
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_46_33_62_4_stop:
+    }
+    [ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc"; @line = 64; @symbol_functiondef = [onMenu,64,13,19]; @symbol_return<0> = [Boolean,64,25,32]; ]
+    function onMenu() as Boolean {
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_64_33_67_4_start:
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 65 8 ]
+        symbol [ WatchUi %tmp.1 65 8 15 ];
+        %tmp.1 = getm $.Toybox.WatchUi;
+        symbol [ pushView %tmp.2 65 16 24 ];
+        %tmp.2 = getv function %tmp.1 :pushView;
+        symbol [ Rez %tmp.6 65 29 32 ];
+        %tmp.6 = getv ? :Rez;
+        symbol [ Menus %tmp.7 65 33 38 ];
+        %tmp.7 = getv %tmp.6 :Menus;
+        symbol [ MainMenu %tmp.8 65 39 47 ];
+        %tmp.8 = getv function ? %tmp.7 :MainMenu;
+        %tmp.3 = newc %tmp.8 ();
+        symbol [ FlowmodoroMenuDelegate %tmp.12 65 55 77 ];
+        %tmp.12 = getv ? :FlowmodoroMenuDelegate;
+        %tmp.9 = newc %tmp.12 ();
+        symbol [ WatchUi %tmp.13 65 81 88 ];
+        %tmp.13 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_UP %tmp.14 65 89 97 ];
+        %tmp.14 = getv %tmp.13 :SLIDE_UP;
+        invoke %tmp.1 %tmp.2(%tmp.3, %tmp.9, %tmp.14);
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 66 8 ]
+        %tmp.15 = true;
+        ret %tmp.15;
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_64_33_67_4_stop:
+    }
+    [ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc"; @line = 69; @symbol_functiondef = [tickUp,69,13,19]; ]
+    function tickUp() {
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_69_22_72_4_start:
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 70 8 ]
+        symbol [ _time %tmp.3 70 8 13 ];
+        %tmp.3 = getv ? :_time;
+        %tmp.4 = add %tmp.3 1;
+        symbol [ _time ? 70 8 13 ];
+        putv self :_time dup %tmp.4;
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 71 8 ]
+        symbol [ _view %tmp.6 71 8 13 ];
+        %tmp.6 = getv ? :_view;
+        symbol [ set_timer_value %tmp.7 71 14 29 ];
+        %tmp.7 = getv function %tmp.6 :set_timer_value;
+        symbol [ _time %tmp.9 71 30 35 ];
+        %tmp.9 = getv ? :_time;
+        invoke %tmp.6 %tmp.7(%tmp.9);
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_69_22_72_4_stop:
+    }
+    [ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc"; @line = 73; @symbol_functiondef = [tickDown,73,13,21]; ]
+    function tickDown() {
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_73_24_92_4_start:
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 74 8 ]
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_74_8_90_8_if_stmt:
+        symbol [ _time %tmp.2 74 12 17 ];
+        %tmp.2 = getv ? :_time;
+        bf %tmp.2 @_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_74_8_90_8_if_else_false;
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_74_8_90_8_if_true:
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_74_19_76_8_start:
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 75 12 ]
+        symbol [ _time %tmp.5 75 12 17 ];
+        %tmp.5 = getv ? :_time;
+        %tmp.6 = sub %tmp.5 1;
+        symbol [ _time ? 75 12 17 ];
+        putv self :_time dup %tmp.6;
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_74_19_76_8_stop:
+        goto @_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_74_8_90_8_if_end;
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_74_8_90_8_if_else_false:
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_76_15_90_8_start:
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 77 12 ]
+        symbol [ _timer %tmp.8 77 12 18 ];
+        %tmp.8 = getv ? :_timer;
+        symbol [ stop %tmp.9 77 19 23 ];
+        %tmp.9 = getv function %tmp.8 :stop;
+        invoke %tmp.8 %tmp.9();
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 78 12 ]
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_78_12_88_12_if_stmt:
+        symbol [ Attention %tmp.11 78 16 25 ];
+        %tmp.11 = getv ? :Attention;
+        %tmp.13 = const :vibrate;
+        symbol [ vibrate %tmp.13 78 31 38 const ];
+        %tmp.14 = canhazplz %tmp.11 %tmp.13;
+        bf %tmp.14 @_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_78_12_88_12_if_end;
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_78_12_88_12_if_true:
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_78_40_88_12_start:
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 79 16 ]
+        [ "_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_78_40_88_12_start" "_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_78_40_88_12_stop" ]
+        %vibeData.1 = local;
+        symbol [ vibeData %vibeData.1 79 20 28 ];
+        %tmp.15 = newa 5;
+        symbol [ Attention %tmp.19 81 24 33 ];
+        %tmp.19 = getv ? :Attention;
+        %tmp.20 = as %tmp.19 { (interface { var vibrate; }) };
+        symbol [ VibeProfile %tmp.21 81 34 45 ];
+        %tmp.21 = getv function ? %tmp.20 :VibeProfile;
+        %tmp.22 = 50;
+        %tmp.23 = 2000;
+        %tmp.16 = newc %tmp.21 (%tmp.22, %tmp.23);
+        %tmp.24 = dup %tmp.15;
+        %tmp.25 = aputv %tmp.24 0 %tmp.16;
+        symbol [ Attention %tmp.29 82 24 33 ];
+        %tmp.29 = getv ? :Attention;
+        %tmp.30 = as %tmp.29 { (interface { var vibrate; }) };
+        symbol [ VibeProfile %tmp.31 82 34 45 ];
+        %tmp.31 = getv function ? %tmp.30 :VibeProfile;
+        %tmp.32 = 0;
+        %tmp.33 = 2000;
+        %tmp.26 = newc %tmp.31 (%tmp.32, %tmp.33);
+        %tmp.34 = dup %tmp.25;
+        %tmp.35 = aputv %tmp.34 1 %tmp.26;
+        symbol [ Attention %tmp.39 83 24 33 ];
+        %tmp.39 = getv ? :Attention;
+        %tmp.40 = as %tmp.39 { (interface { var vibrate; }) };
+        symbol [ VibeProfile %tmp.41 83 34 45 ];
+        %tmp.41 = getv function ? %tmp.40 :VibeProfile;
+        %tmp.42 = 50;
+        %tmp.43 = 2000;
+        %tmp.36 = newc %tmp.41 (%tmp.42, %tmp.43);
+        %tmp.44 = dup %tmp.35;
+        %tmp.45 = aputv %tmp.44 2 %tmp.36;
+        symbol [ Attention %tmp.49 84 24 33 ];
+        %tmp.49 = getv ? :Attention;
+        %tmp.50 = as %tmp.49 { (interface { var vibrate; }) };
+        symbol [ VibeProfile %tmp.51 84 34 45 ];
+        %tmp.51 = getv function ? %tmp.50 :VibeProfile;
+        %tmp.52 = 0;
+        %tmp.53 = 2000;
+        %tmp.46 = newc %tmp.51 (%tmp.52, %tmp.53);
+        %tmp.54 = dup %tmp.45;
+        %tmp.55 = aputv %tmp.54 3 %tmp.46;
+        symbol [ Attention %tmp.59 85 24 33 ];
+        %tmp.59 = getv ? :Attention;
+        %tmp.60 = as %tmp.59 { (interface { var vibrate; }) };
+        symbol [ VibeProfile %tmp.61 85 34 45 ];
+        %tmp.61 = getv function ? %tmp.60 :VibeProfile;
+        %tmp.62 = 50;
+        %tmp.63 = 2000;
+        %tmp.56 = newc %tmp.61 (%tmp.62, %tmp.63);
+        %tmp.64 = dup %tmp.55;
+        %tmp.65 = aputv %tmp.64 4 %tmp.56;
+        lputv %vibeData.1 %tmp.65;
+        symbol [ vibeData %vibeData.1 79 20 28 ];
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 87 16 ]
+        symbol [ Attention %tmp.67 87 16 25 ];
+        %tmp.67 = getv ? :Attention;
+        %tmp.68 = as %tmp.67 { (interface { var vibrate; }) };
+        symbol [ vibrate %tmp.69 87 26 33 ];
+        %tmp.69 = getv function %tmp.68 :vibrate;
+        %tmp.70 = lgetv %vibeData.1;
+        symbol [ vibeData %tmp.70 87 34 42 ];
+        invoke %tmp.68 %tmp.69(%tmp.70);
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_78_40_88_12_stop:
+        goto @_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_78_12_88_12_if_end;
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_78_12_88_12_if_end:
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 89 8 ]
+        symbol [ TimerState %tmp.72 89 17 27 ];
+        %tmp.72 = getv ? :TimerState;
+        symbol [ Initial %tmp.73 89 28 35 ];
+        %tmp.73 = getv %tmp.72 :Initial;
+        symbol [ _state ? 89 8 14 ];
+        putv self :_state %tmp.73;
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_76_15_90_8_stop:
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_74_8_90_8_if_end:
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc" 91 8 ]
+        symbol [ _view %tmp.75 91 8 13 ];
+        %tmp.75 = getv ? :_view;
+        symbol [ set_timer_value %tmp.76 91 14 29 ];
+        %tmp.76 = getv function %tmp.75 :set_timer_value;
+        symbol [ _time %tmp.78 91 30 35 ];
+        %tmp.78 = getv ? :_time;
+        invoke %tmp.75 %tmp.76(%tmp.78);
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroDelegate_mc_73_24_92_4_stop:
+    }
+}
+[ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroDelegate.mc"; @line = 1; ]
+<init> {
+}

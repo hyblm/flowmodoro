@@ -1,0 +1,33 @@
+[ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/enums/states.mc"; @line = 1; @symbol_classdef = [TimerState,1,6,16]; ]
+class TimerState {
+    [ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/enums/states.mc"; @line = 1; ]
+    <init> {
+    }
+    [ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/enums/states.mc"; @line = 1; ]
+    static
+    <init> {
+    }
+    [ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/enums/states.mc"; @line = 2; ]
+    static
+    enum {
+        [ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/enums/states.mc"; @line = 3; @position = 8; @symbol_enumdec = [Initial,3,8,15]; ]
+        Initial,
+        [ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/enums/states.mc"; @line = 4; @position = 8; @symbol_enumdec = [Focus,4,8,13]; ]
+        Focus,
+        [ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/enums/states.mc"; @line = 5; @position = 8; @symbol_enumdec = [FocusHover,5,8,18]; ]
+        FocusHover,
+        [ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/enums/states.mc"; @line = 6; @position = 8; @symbol_enumdec = [FocusPaused,6,8,19]; ]
+        FocusPaused,
+        [ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/enums/states.mc"; @line = 7; @position = 8; @symbol_enumdec = [Break,7,8,13]; ]
+        Break,
+        [ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/enums/states.mc"; @line = 8; @position = 8; @symbol_enumdec = [BreakHover,8,8,18]; ]
+        BreakHover,
+        [ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/enums/states.mc"; @line = 9; @position = 8; @symbol_enumdec = [BreakPaused,9,8,19]; ]
+        BreakPaused,
+        [ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/enums/states.mc"; @line = 10; @position = 8; @symbol_enumdec = [ExitDialog,10,8,18]; ]
+        ExitDialog
+    }
+}
+[ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/enums/states.mc"; @line = 1; ]
+<init> {
+}

@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="/home/matyas/Documents/code/personal/Flowmodoro/manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowApp.mc" id="1" lineNum="5" parent="globals/FlowApp" pc="268435460" symbol="&lt;init&gt;"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowView.mc" id="2" lineNum="4" parent="globals/FlowView" pc="268435472" symbol="&lt;init&gt;"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowApp.mc" id="3" lineNum="32" parent="globals" pc="268435484" symbol="getApp"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowApp.mc" id="3" lineNum="33" parent="globals" pc="268435494" symbol="getApp"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="4" lineNum="186" parent="globals" pc="268435505" symbol="format_timer"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="4" lineNum="187" parent="globals" pc="268435516" symbol="format_timer"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="4" lineNum="188" parent="globals" pc="268435524" symbol="format_timer"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="4" lineNum="189" parent="globals" pc="268435535" symbol="format_timer"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="4" lineNum="192" parent="globals" pc="268435542" symbol="format_timer"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="4" lineNum="193" parent="globals" pc="268435547" symbol="format_timer"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="4" lineNum="194" parent="globals" pc="268435580" symbol="format_timer"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="4" lineNum="196" parent="globals" pc="268435601" symbol="format_timer"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="4" lineNum="199" parent="globals" pc="268435616" symbol="format_timer"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="4" lineNum="200" parent="globals" pc="268435649" symbol="format_timer"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="4" lineNum="202" parent="globals" pc="268435656" symbol="format_timer"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="5" lineNum="4" parent="globals/FlowDelegate" pc="268435659" symbol="&lt;init&gt;"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="5" lineNum="10" parent="globals/FlowDelegate" pc="268435670" symbol="&lt;init&gt;"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowMenuDelegate.mc" id="6" lineNum="5" parent="globals/FlowMenuDelegate" pc="268435684" symbol="&lt;init&gt;"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/bin/gen/006-B4024-00/source/Rez.mcgen" id="7" lineNum="7" parent="globals/Rez" pc="268435696" symbol="&lt;init&gt;"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowApp.mc" id="8" lineNum="36" parent="globals" pc="268435716" symbol="getView"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowApp.mc" id="8" lineNum="37" parent="globals" pc="268435726" symbol="getView"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowApp.mc" id="9" lineNum="13" parent="globals/FlowApp" pc="268435743" symbol="onStart"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowApp.mc" id="10" lineNum="21" parent="globals/FlowApp" pc="268435746" symbol="getInitialView"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowApp.mc" id="10" lineNum="22" parent="globals/FlowApp" pc="268435748" symbol="getInitialView"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowApp.mc" id="10" lineNum="23" parent="globals/FlowApp" pc="268435773" symbol="getInitialView"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowApp.mc" id="11" lineNum="8" parent="globals/FlowApp" pc="268435807" symbol="initialize"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowApp.mc" id="11" lineNum="9" parent="globals/FlowApp" pc="268435809" symbol="initialize"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowApp.mc" id="12" lineNum="26" parent="globals/FlowApp" pc="268435822" symbol="getView"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowApp.mc" id="12" lineNum="27" parent="globals/FlowApp" pc="268435824" symbol="getView"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowApp.mc" id="13" lineNum="17" parent="globals/FlowApp" pc="268435830" symbol="onStop"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowView.mc" id="14" lineNum="49" parent="globals/FlowView" pc="268435833" symbol="set_secondary_label"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowView.mc" id="14" lineNum="50" parent="globals/FlowView" pc="268435835" symbol="set_secondary_label"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowView.mc" id="15" lineNum="45" parent="globals/FlowView" pc="268435852" symbol="set_primary_label"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowView.mc" id="15" lineNum="46" parent="globals/FlowView" pc="268435854" symbol="set_primary_label"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowView.mc" id="17" lineNum="17" parent="globals/FlowView" pc="268435871" symbol="onLayout"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowView.mc" id="17" lineNum="18" parent="globals/FlowView" pc="268435873" symbol="onLayout"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowView.mc" id="17" lineNum="20" parent="globals/FlowView" pc="268435906" symbol="onLayout"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowView.mc" id="17" lineNum="21" parent="globals/FlowView" pc="268435926" symbol="onLayout"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowView.mc" id="17" lineNum="22" parent="globals/FlowView" pc="268435946" symbol="onLayout"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowView.mc" id="17" lineNum="23" parent="globals/FlowView" pc="268435966" symbol="onLayout"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowView.mc" id="17" lineNum="24" parent="globals/FlowView" pc="268435986" symbol="onLayout"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowView.mc" id="18" lineNum="61" parent="globals/FlowView" pc="268436007" symbol="set_btn_next"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowView.mc" id="18" lineNum="62" parent="globals/FlowView" pc="268436009" symbol="set_btn_next"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowView.mc" id="19" lineNum="12" parent="globals/FlowView" pc="268436026" symbol="initialize"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowView.mc" id="19" lineNum="13" parent="globals/FlowView" pc="268436028" symbol="initialize"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowView.mc" id="21" lineNum="53" parent="globals/FlowView" pc="268436041" symbol="set_btn_select"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowView.mc" id="21" lineNum="54" parent="globals/FlowView" pc="268436043" symbol="set_btn_select"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowView.mc" id="22" lineNum="34" parent="globals/FlowView" pc="268436060" symbol="onUpdate"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowView.mc" id="22" lineNum="36" parent="globals/FlowView" pc="268436062" symbol="onUpdate"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowView.mc" id="23" lineNum="57" parent="globals/FlowView" pc="268436079" symbol="set_btn_back"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowView.mc" id="23" lineNum="58" parent="globals/FlowView" pc="268436081" symbol="set_btn_back"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="24" lineNum="141" parent="globals/FlowDelegate" pc="268436098" symbol="onPreviousPage"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="24" lineNum="142" parent="globals/FlowDelegate" pc="268436100" symbol="onPreviousPage"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="24" lineNum="143" parent="globals/FlowDelegate" pc="268436118" symbol="onPreviousPage"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="25" lineNum="146" parent="globals/FlowDelegate" pc="268436120" symbol="onMenu"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="25" lineNum="147" parent="globals/FlowDelegate" pc="268436122" symbol="onMenu"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="25" lineNum="148" parent="globals/FlowDelegate" pc="268436187" symbol="onMenu"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="18" parent="globals/FlowDelegate" pc="268436189" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="19" parent="globals/FlowDelegate" pc="268436192" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="20" parent="globals/FlowDelegate" pc="268436197" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="24" parent="globals/FlowDelegate" pc="268436212" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="35" parent="globals/FlowDelegate" pc="268436228" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="44" parent="globals/FlowDelegate" pc="268436244" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="54" parent="globals/FlowDelegate" pc="268436260" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="58" parent="globals/FlowDelegate" pc="268436276" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="21" parent="globals/FlowDelegate" pc="268436295" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="22" parent="globals/FlowDelegate" pc="268436310" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="25" parent="globals/FlowDelegate" pc="268436327" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="26" parent="globals/FlowDelegate" pc="268436336" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="27" parent="globals/FlowDelegate" pc="268436355" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="28" parent="globals/FlowDelegate" pc="268436374" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="29" parent="globals/FlowDelegate" pc="268436393" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="30" parent="globals/FlowDelegate" pc="268436424" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="31" parent="globals/FlowDelegate" pc="268436448" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="32" parent="globals/FlowDelegate" pc="268436457" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="33" parent="globals/FlowDelegate" pc="268436488" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="36" parent="globals/FlowDelegate" pc="268436491" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="37" parent="globals/FlowDelegate" pc="268436500" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="38" parent="globals/FlowDelegate" pc="268436517" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="39" parent="globals/FlowDelegate" pc="268436543" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="40" parent="globals/FlowDelegate" pc="268436567" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="41" parent="globals/FlowDelegate" pc="268436586" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="42" parent="globals/FlowDelegate" pc="268436598" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="45" parent="globals/FlowDelegate" pc="268436601" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="46" parent="globals/FlowDelegate" pc="268436610" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="47" parent="globals/FlowDelegate" pc="268436635" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="48" parent="globals/FlowDelegate" pc="268436657" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="49" parent="globals/FlowDelegate" pc="268436676" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="50" parent="globals/FlowDelegate" pc="268436695" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="51" parent="globals/FlowDelegate" pc="268436714" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="52" parent="globals/FlowDelegate" pc="268436733" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="55" parent="globals/FlowDelegate" pc="268436736" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="56" parent="globals/FlowDelegate" pc="268436755" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="57" parent="globals/FlowDelegate" pc="268436767" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="59" parent="globals/FlowDelegate" pc="268436770" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="60" parent="globals/FlowDelegate" pc="268436789" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="61" parent="globals/FlowDelegate" pc="268436820" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="65" parent="globals/FlowDelegate" pc="268436824" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="26" lineNum="66" parent="globals/FlowDelegate" pc="268436835" symbol="onSelect"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="27" lineNum="151" parent="globals/FlowDelegate" pc="268436837" symbol="tickUp"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="27" lineNum="152" parent="globals/FlowDelegate" pc="268436839" symbol="tickUp"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="27" lineNum="153" parent="globals/FlowDelegate" pc="268436854" symbol="tickUp"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="28" lineNum="69" parent="globals/FlowDelegate" pc="268436882" symbol="onBack"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="28" lineNum="70" parent="globals/FlowDelegate" pc="268436884" symbol="onBack"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="28" lineNum="71" parent="globals/FlowDelegate" pc="268436889" symbol="onBack"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="28" lineNum="72" parent="globals/FlowDelegate" pc="268436904" symbol="onBack"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="28" lineNum="73" parent="globals/FlowDelegate" pc="268436920" symbol="onBack"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="28" lineNum="74" parent="globals/FlowDelegate" pc="268436936" symbol="onBack"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="28" lineNum="75" parent="globals/FlowDelegate" pc="268436952" symbol="onBack"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="28" lineNum="77" parent="globals/FlowDelegate" pc="268436968" symbol="onBack"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="28" lineNum="76" parent="globals/FlowDelegate" pc="268436971" symbol="onBack"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="28" lineNum="78" parent="globals/FlowDelegate" pc="268436982" symbol="onBack"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="28" lineNum="80" parent="globals/FlowDelegate" pc="268436986" symbol="onBack"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="28" lineNum="81" parent="globals/FlowDelegate" pc="268436997" symbol="onBack"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="29" lineNum="84" parent="globals/FlowDelegate" pc="268436999" symbol="unhover_focus"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="29" lineNum="85" parent="globals/FlowDelegate" pc="268437002" symbol="unhover_focus"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="29" lineNum="86" parent="globals/FlowDelegate" pc="268437012" symbol="unhover_focus"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="29" lineNum="87" parent="globals/FlowDelegate" pc="268437027" symbol="unhover_focus"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="29" lineNum="88" parent="globals/FlowDelegate" pc="268437058" symbol="unhover_focus"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="29" lineNum="91" parent="globals/FlowDelegate" pc="268437085" symbol="unhover_focus"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="29" lineNum="92" parent="globals/FlowDelegate" pc="268437104" symbol="unhover_focus"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="29" lineNum="93" parent="globals/FlowDelegate" pc="268437123" symbol="unhover_focus"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="29" lineNum="94" parent="globals/FlowDelegate" pc="268437142" symbol="unhover_focus"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="29" lineNum="95" parent="globals/FlowDelegate" pc="268437161" symbol="unhover_focus"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="29" lineNum="97" parent="globals/FlowDelegate" pc="268437170" symbol="unhover_focus"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="29" lineNum="99" parent="globals/FlowDelegate" pc="268437182" symbol="unhover_focus"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="30" lineNum="156" parent="globals/FlowDelegate" pc="268437194" symbol="tickDown"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="30" lineNum="157" parent="globals/FlowDelegate" pc="268437197" symbol="tickDown"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="30" lineNum="158" parent="globals/FlowDelegate" pc="268437205" symbol="tickDown"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="30" lineNum="159" parent="globals/FlowDelegate" pc="268437220" symbol="tickDown"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="30" lineNum="160" parent="globals/FlowDelegate" pc="268437247" symbol="tickDown"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="30" lineNum="162" parent="globals/FlowDelegate" pc="268437261" symbol="tickDown"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="30" lineNum="163" parent="globals/FlowDelegate" pc="268437273" symbol="tickDown"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="30" lineNum="164" parent="globals/FlowDelegate" pc="268437281" symbol="tickDown"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="30" lineNum="165" parent="globals/FlowDelegate" pc="268437300" symbol="tickDown"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="30" lineNum="166" parent="globals/FlowDelegate" pc="268437319" symbol="tickDown"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="30" lineNum="167" parent="globals/FlowDelegate" pc="268437338" symbol="tickDown"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="30" lineNum="168" parent="globals/FlowDelegate" pc="268437357" symbol="tickDown"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="30" lineNum="169" parent="globals/FlowDelegate" pc="268437376" symbol="tickDown"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="30" lineNum="170" parent="globals/FlowDelegate" pc="268437387" symbol="tickDown"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="30" lineNum="171" parent="globals/FlowDelegate" pc="268437402" symbol="tickDown"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="30" lineNum="179" parent="globals/FlowDelegate" pc="268437566" symbol="tickDown"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="31" lineNum="13" parent="globals/FlowDelegate" pc="268437587" symbol="initialize"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="31" lineNum="14" parent="globals/FlowDelegate" pc="268437589" symbol="initialize"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="31" lineNum="15" parent="globals/FlowDelegate" pc="268437601" symbol="initialize"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="32" lineNum="102" parent="globals/FlowDelegate" pc="268437631" symbol="onNextPage"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="32" lineNum="103" parent="globals/FlowDelegate" pc="268437634" symbol="onNextPage"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="32" lineNum="104" parent="globals/FlowDelegate" pc="268437652" symbol="onNextPage"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="32" lineNum="105" parent="globals/FlowDelegate" pc="268437670" symbol="onNextPage"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="32" lineNum="106" parent="globals/FlowDelegate" pc="268437675" symbol="onNextPage"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="32" lineNum="107" parent="globals/FlowDelegate" pc="268437691" symbol="onNextPage"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="32" lineNum="113" parent="globals/FlowDelegate" pc="268437707" symbol="onNextPage"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="32" lineNum="119" parent="globals/FlowDelegate" pc="268437723" symbol="onNextPage"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="32" lineNum="120" parent="globals/FlowDelegate" pc="268437739" symbol="onNextPage"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="32" lineNum="133" parent="globals/FlowDelegate" pc="268437755" symbol="onNextPage"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="32" lineNum="108" parent="globals/FlowDelegate" pc="268437758" symbol="onNextPage"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="32" lineNum="109" parent="globals/FlowDelegate" pc="268437777" symbol="onNextPage"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="32" lineNum="110" parent="globals/FlowDelegate" pc="268437802" symbol="onNextPage"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="32" lineNum="111" parent="globals/FlowDelegate" pc="268437811" symbol="onNextPage"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="32" lineNum="112" parent="globals/FlowDelegate" pc="268437823" symbol="onNextPage"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="32" lineNum="114" parent="globals/FlowDelegate" pc="268437854" symbol="onNextPage"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="32" lineNum="115" parent="globals/FlowDelegate" pc="268437863" symbol="onNextPage"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="32" lineNum="116" parent="globals/FlowDelegate" pc="268437882" symbol="onNextPage"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="32" lineNum="117" parent="globals/FlowDelegate" pc="268437901" symbol="onNextPage"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="32" lineNum="118" parent="globals/FlowDelegate" pc="268437920" symbol="onNextPage"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="32" lineNum="121" parent="globals/FlowDelegate" pc="268437923" symbol="onNextPage"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="32" lineNum="122" parent="globals/FlowDelegate" pc="268437938" symbol="onNextPage"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="32" lineNum="123" parent="globals/FlowDelegate" pc="268437947" symbol="onNextPage"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="32" lineNum="124" parent="globals/FlowDelegate" pc="268437964" symbol="onNextPage"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="32" lineNum="125" parent="globals/FlowDelegate" pc="268437983" symbol="onNextPage"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="32" lineNum="126" parent="globals/FlowDelegate" pc="268438002" symbol="onNextPage"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="32" lineNum="127" parent="globals/FlowDelegate" pc="268438021" symbol="onNextPage"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="32" lineNum="128" parent="globals/FlowDelegate" pc="268438040" symbol="onNextPage"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="32" lineNum="129" parent="globals/FlowDelegate" pc="268438071" symbol="onNextPage"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="32" lineNum="130" parent="globals/FlowDelegate" pc="268438095" symbol="onNextPage"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="32" lineNum="131" parent="globals/FlowDelegate" pc="268438104" symbol="onNextPage"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="32" lineNum="132" parent="globals/FlowDelegate" pc="268438135" symbol="onNextPage"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="32" lineNum="134" parent="globals/FlowDelegate" pc="268438138" symbol="onNextPage"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowDelegate.mc" id="32" lineNum="138" parent="globals/FlowDelegate" pc="268438142" symbol="onNextPage"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowMenuDelegate.mc" id="33" lineNum="11" parent="globals/FlowMenuDelegate" pc="268438144" symbol="onMenuItem"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowMenuDelegate.mc" id="33" lineNum="12" parent="globals/FlowMenuDelegate" pc="268438146" symbol="onMenuItem"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowMenuDelegate.mc" id="33" lineNum="13" parent="globals/FlowMenuDelegate" pc="268438157" symbol="onMenuItem"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowMenuDelegate.mc" id="33" lineNum="14" parent="globals/FlowMenuDelegate" pc="268438178" symbol="onMenuItem"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowMenuDelegate.mc" id="33" lineNum="15" parent="globals/FlowMenuDelegate" pc="268438189" symbol="onMenuItem"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowMenuDelegate.mc" id="34" lineNum="7" parent="globals/FlowMenuDelegate" pc="268438211" symbol="initialize"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/source/FlowMenuDelegate.mc" id="34" lineNum="8" parent="globals/FlowMenuDelegate" pc="268438213" symbol="initialize"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/bin/gen/006-B4024-00/source/Rez.mcgen" id="36" lineNum="13" parent="globals/Rez/Layouts" pc="268438226" symbol="MainLayout"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/bin/gen/006-B4024-00/source/Rez.mcgen" id="36" lineNum="14" parent="globals/Rez/Layouts" pc="268438237" symbol="MainLayout"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/bin/gen/006-B4024-00/source/Rez.mcgen" id="36" lineNum="16" parent="globals/Rez/Layouts" pc="268438352" symbol="MainLayout"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/bin/gen/006-B4024-00/source/Rez.mcgen" id="36" lineNum="18" parent="globals/Rez/Layouts" pc="268438440" symbol="MainLayout"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/bin/gen/006-B4024-00/source/Rez.mcgen" id="36" lineNum="20" parent="globals/Rez/Layouts" pc="268438539" symbol="MainLayout"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/bin/gen/006-B4024-00/source/Rez.mcgen" id="36" lineNum="22" parent="globals/Rez/Layouts" pc="268438627" symbol="MainLayout"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/bin/gen/006-B4024-00/source/Rez.mcgen" id="36" lineNum="24" parent="globals/Rez/Layouts" pc="268438716" symbol="MainLayout"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/bin/gen/006-B4024-00/source/Rez.mcgen" id="37" lineNum="29" parent="globals/Rez/Menus/MainMenu" pc="268438746" symbol="&lt;init&gt;"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/bin/gen/006-B4024-00/source/Rez.mcgen" id="38" lineNum="30" parent="globals/Rez/Menus/MainMenu" pc="268438758" symbol="initialize"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/bin/gen/006-B4024-00/source/Rez.mcgen" id="38" lineNum="31" parent="globals/Rez/Menus/MainMenu" pc="268438760" symbol="initialize"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/bin/gen/006-B4024-00/source/Rez.mcgen" id="38" lineNum="32" parent="globals/Rez/Menus/MainMenu" pc="268438772" symbol="initialize"/>
+        <entry filename="/home/matyas/Documents/code/personal/Flowmodoro/bin/gen/006-B4024-00/source/Rez.mcgen" id="38" lineNum="33" parent="globals/Rez/Menus/MainMenu" pc="268438817" symbol="initialize"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry id="8389346" symbol="text"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry id="5" module="true" symbol="globals/Rez/Menus"/>
+        <entry id="36" method="true" symbol="MainLayout"/>
+        <entry id="7" object="true" symbol="FlowApp"/>
+        <entry id="21" method="true" symbol="set_btn_select"/>
+        <entry field="true" id="16" symbol="&lt;globals/FlowView/&lt;&gt;_btn_select&gt;"/>
+        <entry field="true" id="27" symbol="&lt;globals/FlowDelegate/&lt;&gt;_timer&gt;"/>
+        <entry field="true" id="17" symbol="&lt;globals/FlowView/&lt;&gt;_primary&gt;"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry id="31" method="true" symbol="tickUp"/>
+        <entry field="true" id="25" symbol="&lt;globals/FlowDelegate/&lt;&gt;_time&gt;"/>
+        <entry field="true" id="38" symbol="AppName"/>
+        <entry id="9" object="true" symbol="FlowMenuDelegate"/>
+        <entry id="6" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="8389080" method="true" symbol="onMenu"/>
+        <entry field="true" id="14" symbol="&lt;globals/FlowView/&lt;&gt;_btn_back&gt;"/>
+        <entry id="10" object="true" symbol="FlowView"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry id="8389081" method="true" symbol="onBack"/>
+        <entry id="2" module="true" symbol="globals/Rez"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry field="true" id="8389065" symbol="locY"/>
+        <entry field="true" id="8389064" symbol="locX"/>
+        <entry id="23" method="true" symbol="set_secondary_label"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="8389348" symbol="font"/>
+        <entry id="42" symbol="item_2"/>
+        <entry id="41" symbol="item_1"/>
+        <entry id="8389079" method="true" symbol="onPreviousPage"/>
+        <entry id="34" module="true" symbol="Menus"/>
+        <entry id="8389275" method="true" symbol="getApp"/>
+        <entry id="4" module="true" symbol="globals/Rez/Layouts"/>
+        <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry field="true" id="8389063" symbol="identifier"/>
+        <entry field="true" id="13" symbol="&lt;globals/FlowApp/&lt;&gt;_view&gt;"/>
+        <entry id="8389349" symbol="justification"/>
+        <entry id="32" method="true" symbol="unhover_focus"/>
+        <entry id="8388987" method="true" symbol="vibrate"/>
+        <entry field="true" id="26" symbol="&lt;globals/FlowDelegate/&lt;&gt;_time2&gt;"/>
+        <entry id="11" object="true" symbol="TimerState"/>
+        <entry field="true" id="15" symbol="&lt;globals/FlowView/&lt;&gt;_btn_next&gt;"/>
+        <entry id="30" method="true" symbol="tickDown"/>
+        <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+        <entry id="19" method="true" symbol="set_btn_back"/>
+        <entry id="22" method="true" symbol="set_primary_label"/>
+        <entry id="37" object="true" symbol="MainMenu"/>
+        <entry field="true" id="18" symbol="&lt;globals/FlowView/&lt;&gt;_secondary&gt;"/>
+        <entry id="8388644" module="true" symbol="System"/>
+        <entry id="20" method="true" symbol="set_btn_next"/>
+        <entry id="8389619" method="true" symbol="onSelect"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry field="true" id="35" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="8389123" method="true" symbol="onShow"/>
+        <entry field="true" id="29" symbol="&lt;globals/FlowDelegate/&lt;&gt;_view&gt;"/>
+        <entry field="true" id="28" symbol="&lt;globals/FlowDelegate/&lt;&gt;_timer_value&gt;"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry field="true" id="24" symbol="&lt;globals/FlowDelegate/&lt;&gt;_state&gt;"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry id="8389109" method="true" symbol="onMenuItem"/>
+        <entry field="true" id="8389347" symbol="color"/>
+        <entry id="8" object="true" symbol="FlowDelegate"/>
+        <entry id="33" module="true" symbol="Layouts"/>
+        <entry id="8389125" method="true" symbol="onHide"/>
+        <entry id="12" method="true" symbol="format_timer"/>
+        <entry id="8391945" method="true" symbol="getView"/>
+        <entry id="8389078" method="true" symbol="onNextPage"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+        <entry field="true" id="40" symbol="menu_label_2"/>
+        <entry field="true" id="39" symbol="menu_label_1"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268435658" name="total_seconds" stackId="1" startPc="268435505"/>
+        <entry endPc="268435658" name="hours" stackId="2" startPc="268435516"/>
+        <entry endPc="268435658" name="minutes" stackId="3" startPc="268435516"/>
+        <entry endPc="268435658" name="seconds" stackId="4" startPc="268435516"/>
+        <entry endPc="268435658" name="updated_text" stackId="5" startPc="268435516"/>
+        <entry endPc="268435597" name="minutes_two_digits" stackId="6" startPc="268435547"/>
+        <entry endPc="268435658" name="seconds_two_digits" stackId="7" startPc="268435516"/>
+        <entry arg="true" endPc="268435851" name="text" stackId="1" startPc="268435833"/>
+        <entry arg="true" endPc="268435870" name="text" stackId="1" startPc="268435852"/>
+        <entry arg="true" endPc="268436006" name="dc" stackId="1" startPc="268435871"/>
+        <entry arg="true" endPc="268436025" name="text" stackId="1" startPc="268436007"/>
+        <entry arg="true" endPc="268436059" name="text" stackId="1" startPc="268436041"/>
+        <entry arg="true" endPc="268436078" name="dc" stackId="1" startPc="268436060"/>
+        <entry arg="true" endPc="268436097" name="text" stackId="1" startPc="268436079"/>
+        <entry endPc="268436822" name="focus_time" stackId="1" startPc="268436197"/>
+        <entry endPc="268436822" name="duration" stackId="2" startPc="268436197"/>
+        <entry endPc="268436822" name="break_duration" stackId="3" startPc="268436197"/>
+        <entry endPc="268437081" name="focus_time" stackId="1" startPc="268437012"/>
+        <entry endPc="268437582" name="vibeData" stackId="1" startPc="268437402"/>
+        <entry endPc="268438140" name="duration" stackId="1" startPc="268437675"/>
+        <entry endPc="268438140" name="seconds" stackId="2" startPc="268437675"/>
+        <entry endPc="268438140" name="focus_time" stackId="3" startPc="268437675"/>
+        <entry arg="true" endPc="268438210" name="item" stackId="1" startPc="268438144"/>
+        <entry arg="true" endPc="268438745" name="dc" stackId="1" startPc="268438226"/>
+        <entry endPc="268438745" name="rez_cmp_local_text_primary" stackId="2" startPc="268438237"/>
+        <entry endPc="268438745" name="rez_cmp_local_text_secondary" stackId="3" startPc="268438237"/>
+        <entry endPc="268438745" name="rez_cmp_local_text_btn_select" stackId="4" startPc="268438237"/>
+        <entry endPc="268438745" name="rez_cmp_local_text_btn_back" stackId="5" startPc="268438237"/>
+        <entry endPc="268438745" name="rez_cmp_local_text_btn_next" stackId="6" startPc="268438237"/>
+    </localVars>
+    <deviceInfo deviceVersion="0ed082a335bbf00c12e5da810e92d4f89288090c" partNumber="006-B4024-00"/>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="menu_label_2"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="menu_label_1"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="67" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/FlowApp" offset="179" parentId="globals" symbolId="FlowApp" type="class"/>
+        <dataEntry label="globals/FlowView" offset="268" parentId="globals" symbolId="FlowView" type="class"/>
+        <dataEntry label="globals/FlowDelegate" offset="438" parentId="globals" symbolId="FlowDelegate" type="class"/>
+        <dataEntry label="globals/FlowMenuDelegate" offset="608" parentId="globals" symbolId="FlowMenuDelegate" type="class"/>
+        <dataEntry label="globals/Rez" offset="661" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/TimerState" offset="723" parentId="globals" symbolId="TimerState" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="767" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="802" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/Menus" offset="837" parentId="Rez" symbolId="Menus" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="872" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry label="globals/Rez/Menus/MainMenu" offset="925" parentId="Menus" symbolId="MainMenu" type="class"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" endPc="268435471" name="&lt;init&gt;" parent="FlowApp" startPc="268435460">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435483" name="&lt;init&gt;" parent="FlowView" startPc="268435472">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435504" name="getApp" startPc="268435484">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435658" name="format_timer" startPc="268435505">
+            <param id="total_seconds"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435683" name="&lt;init&gt;" parent="FlowDelegate" startPc="268435659">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435695" name="&lt;init&gt;" parent="FlowMenuDelegate" startPc="268435684">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435715" name="&lt;init&gt;" parent="Rez" startPc="268435696">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="TimerState">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435742" name="getView" startPc="268435716">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435745" name="onStart" parent="FlowApp" startPc="268435743">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435806" name="getInitialView" parent="FlowApp" startPc="268435746">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435821" name="initialize" parent="FlowApp" startPc="268435807">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435829" name="getView" parent="FlowApp" startPc="268435822">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435832" name="onStop" parent="FlowApp" startPc="268435830">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435851" name="set_secondary_label" parent="FlowView" startPc="268435833">
+            <param id="text"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435870" name="set_primary_label" parent="FlowView" startPc="268435852">
+            <param id="text"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onShow" parent="FlowView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436006" name="onLayout" parent="FlowView" startPc="268435871">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436025" name="set_btn_next" parent="FlowView" startPc="268436007">
+            <param id="text"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436040" name="initialize" parent="FlowView" startPc="268436026">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onHide" parent="FlowView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436059" name="set_btn_select" parent="FlowView" startPc="268436041">
+            <param id="text"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436078" name="onUpdate" parent="FlowView" startPc="268436060">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436097" name="set_btn_back" parent="FlowView" startPc="268436079">
+            <param id="text"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436119" name="onPreviousPage" parent="FlowDelegate" startPc="268436098">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436188" name="onMenu" parent="FlowDelegate" startPc="268436120">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436836" name="onSelect" parent="FlowDelegate" startPc="268436189">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436881" name="tickUp" parent="FlowDelegate" startPc="268436837">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436998" name="onBack" parent="FlowDelegate" startPc="268436882">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437193" name="unhover_focus" parent="FlowDelegate" startPc="268436999">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437586" name="tickDown" parent="FlowDelegate" startPc="268437194">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437630" name="initialize" parent="FlowDelegate" startPc="268437587">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438143" name="onNextPage" parent="FlowDelegate" startPc="268437631">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438210" name="onMenuItem" parent="FlowMenuDelegate" startPc="268438144">
+            <param id="item"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438225" name="initialize" parent="FlowMenuDelegate" startPc="268438211">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Layouts">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Menus">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="TimerState">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438745" name="MainLayout" parent="Layouts" startPc="268438226">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438757" name="&lt;init&gt;" parent="MainMenu" startPc="268438746">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438862" name="initialize" parent="MainMenu" startPc="268438758">
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>

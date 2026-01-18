@@ -1,0 +1,270 @@
+[ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroView.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Graphics,1,14,22]; ]
+import Toybox.Graphics;
+[ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroView.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [WatchUi,2,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroView.mc"; @line = 4; @symbol_classdef = [FlowmodoroView,4,6,20]; @symbol_extends<0> = [WatchUi,4,29,36]; @symbol_extends<1> = [View,4,37,41]; ]
+class FlowmodoroView extends WatchUi.View {
+    [ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroView.mc"; @line = 4; ]
+    <init> {
+    }
+    [ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroView.mc"; @line = 4; ]
+    static
+    <init> {
+    }
+    [ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroView.mc"; @line = 5; @position = 16; @symbol_vardef = [_timer,5,16,22]; ]
+    private
+    var _timer;
+    [ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroView.mc"; @line = 6; @position = 16; @symbol_vardef = [_title,6,16,22]; ]
+    private
+    var _title;
+    [ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroView.mc"; @line = 8; @symbol_functiondef = [initialize,8,13,23]; ]
+    function initialize() as Void {
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_8_26_10_4_start:
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroView.mc" 9 8 ]
+        symbol [ View %tmp.2 9 8 12 ];
+        %tmp.2 = getv ? :View;
+        symbol [ initialize %tmp.3 9 13 23 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_8_26_10_4_stop:
+    }
+    [ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroView.mc"; @line = 13; @symbol_functiondef = [onLayout,13,13,21]; @symbol_param<0> = [dc,13,22,24]; @symbol_param<0>_type<0> = [Dc,13,28,30]; ]
+    function onLayout(dc as Dc) as Void {
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_13_40_18_4_start:
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroView.mc" 14 8 ]
+        %tmp.1 = self;
+        symbol [ setLayout %tmp.2 14 8 17 ];
+        %tmp.2 = getv function %tmp.1 :setLayout;
+        symbol [ Rez %tmp.4 14 18 21 ];
+        %tmp.4 = getv ? :Rez;
+        symbol [ Layouts %tmp.5 14 22 29 ];
+        %tmp.5 = getv %tmp.4 :Layouts;
+        symbol [ MainLayout %tmp.6 14 30 40 ];
+        %tmp.6 = getv function %tmp.5 :MainLayout;
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 14 41 43 ];
+        %tmp.8 = invoke %tmp.5 %tmp.6(%tmp.7);
+        invoke %tmp.1 %tmp.2(%tmp.8);
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroView.mc" 16 8 ]
+        %tmp.9 = self;
+        symbol [ findDrawableById %tmp.10 16 17 33 ];
+        %tmp.10 = getv function %tmp.9 :findDrawableById;
+        %tmp.11 = "timer";
+        %tmp.12 = invoke %tmp.9 %tmp.10(%tmp.11);
+        symbol [ _timer ? 16 8 14 ];
+        putv self :_timer %tmp.12;
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroView.mc" 17 8 ]
+        %tmp.13 = self;
+        symbol [ findDrawableById %tmp.14 17 17 33 ];
+        %tmp.14 = getv function %tmp.13 :findDrawableById;
+        %tmp.15 = "state_title";
+        %tmp.16 = invoke %tmp.13 %tmp.14(%tmp.15);
+        symbol [ _title ? 17 8 14 ];
+        putv self :_title %tmp.16;
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_13_40_18_4_stop:
+    }
+    [ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroView.mc"; @line = 23; @symbol_functiondef = [onShow,23,13,19]; ]
+    function onShow() as Void {
+    }
+    [ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroView.mc"; @line = 27; @symbol_functiondef = [onUpdate,27,13,21]; @symbol_param<0> = [dc,27,22,24]; @symbol_param<0>_type<0> = [Dc,27,28,30]; ]
+    function onUpdate(dc as Dc) as Void {
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_27_40_30_4_start:
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroView.mc" 29 8 ]
+        symbol [ View %tmp.2 29 8 12 ];
+        %tmp.2 = getv ? :View;
+        symbol [ onUpdate %tmp.3 29 13 21 ];
+        %tmp.3 = getv function %tmp.2 :onUpdate;
+        %tmp.4 = lgetv %dc;
+        symbol [ dc %tmp.4 29 22 24 ];
+        invoke %tmp.2 %tmp.3(%tmp.4);
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_27_40_30_4_stop:
+    }
+    [ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroView.mc"; @line = 35; @symbol_functiondef = [onHide,35,13,19]; ]
+    function onHide() as Void {
+    }
+    [ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroView.mc"; @line = 38; @symbol_functiondef = [set_timer_value,38,13,28]; @symbol_param<0> = [total_seconds,38,29,42]; ]
+    function set_timer_value(total_seconds) as Void {
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_38_52_57_4_start:
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroView.mc" 39 8 ]
+        [ "_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_38_52_57_4_start" "_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_38_52_57_4_stop" ]
+        %hours.1 = local;
+        symbol [ hours %hours.1 39 12 17 ];
+        %tmp.1 = lgetv %total_seconds;
+        symbol [ total_seconds %tmp.1 39 20 33 ];
+        %tmp.2 = 3600;
+        %tmp.3 = div %tmp.1 %tmp.2;
+        lputv %hours.1 %tmp.3;
+        symbol [ hours %hours.1 39 12 17 ];
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroView.mc" 40 8 ]
+        [ "_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_38_52_57_4_start" "_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_38_52_57_4_stop" ]
+        %minutes.2 = local;
+        symbol [ minutes %minutes.2 40 12 19 ];
+        %tmp.4 = lgetv %total_seconds;
+        symbol [ total_seconds %tmp.4 40 23 36 ];
+        %tmp.5 = 3600;
+        %tmp.6 = mod %tmp.4 %tmp.5;
+        %tmp.7 = 60;
+        %tmp.8 = div %tmp.6 %tmp.7;
+        lputv %minutes.2 %tmp.8;
+        symbol [ minutes %minutes.2 40 12 19 ];
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroView.mc" 41 8 ]
+        [ "_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_38_52_57_4_start" "_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_38_52_57_4_stop" ]
+        %seconds.3 = local;
+        symbol [ seconds %seconds.3 41 12 19 ];
+        %tmp.9 = lgetv %total_seconds;
+        symbol [ total_seconds %tmp.9 41 22 35 ];
+        %tmp.10 = 60;
+        %tmp.11 = mod %tmp.9 %tmp.10;
+        lputv %seconds.3 %tmp.11;
+        symbol [ seconds %seconds.3 41 12 19 ];
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroView.mc" 43 8 ]
+        [ "_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_38_52_57_4_start" "_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_38_52_57_4_stop" ]
+        %updated_text.4 = local;
+        symbol [ updated_text %updated_text.4 43 12 24 ];
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroView.mc" 44 9 ]
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_44_9_49_9_if_stmt:
+        %tmp.12 = lgetv %hours.1;
+        symbol [ hours %tmp.12 44 13 18 ];
+        bf %tmp.12 @_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_44_9_49_9_if_else_false;
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_44_9_49_9_if_true:
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_44_20_47_9_start:
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroView.mc" 45 12 ]
+        [ "_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_44_20_47_9_start" "_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_44_20_47_9_stop" ]
+        %minutes_two_digits.5 = local;
+        symbol [ minutes_two_digits %minutes_two_digits.5 45 16 34 ];
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_45_37_45_97_begin:
+        %tmp.13 = lgetv %minutes.2;
+        symbol [ minutes %tmp.13 45 38 45 ];
+        %tmp.14 = 9;
+        %tmp.15 = gt %tmp.13 %tmp.14;
+        bf %tmp.15 @_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_45_37_45_97_false;
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_45_37_45_97_true:
+        %tmp.16 = lgetv %minutes.2;
+        symbol [ minutes %tmp.16 45 53 60 ];
+        symbol [ toString %tmp.17 45 61 69 ];
+        %tmp.17 = getv function %tmp.16 :toString;
+        %tmp.18 = invoke %tmp.16 %tmp.17();
+        push %tmp.18;
+        goto @_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_45_37_45_97_end;
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_45_37_45_97_false:
+        %tmp.19 = "0";
+        %tmp.20 = lgetv %minutes.2;
+        symbol [ minutes %tmp.20 45 80 87 ];
+        symbol [ toString %tmp.21 45 88 96 ];
+        %tmp.21 = getv function %tmp.20 :toString;
+        %tmp.22 = invoke %tmp.20 %tmp.21();
+        %tmp.23 = add %tmp.19 %tmp.22;
+        push %tmp.23;
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_45_37_45_97_end:
+        %tmp.24 = phi [%tmp.15 @_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_45_37_45_97_begin] [%tmp.18 @_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_45_37_45_97_true] [%tmp.23 @_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_45_37_45_97_false] [%tmp.24 @_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_45_37_45_97_end];
+        lputv %minutes_two_digits.5 %tmp.24;
+        symbol [ minutes_two_digits %minutes_two_digits.5 45 16 34 ];
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroView.mc" 46 12 ]
+        %tmp.25 = lgetv %hours.1;
+        symbol [ hours %tmp.25 46 27 32 ];
+        symbol [ toString %tmp.26 46 33 41 ];
+        %tmp.26 = getv function %tmp.25 :toString;
+        %tmp.27 = invoke %tmp.25 %tmp.26();
+        %tmp.28 = ":";
+        %tmp.29 = add %tmp.27 %tmp.28;
+        %tmp.30 = lgetv %minutes_two_digits.5;
+        symbol [ minutes_two_digits %tmp.30 46 52 70 ];
+        %tmp.31 = add %tmp.29 %tmp.30;
+        lputv %updated_text.4 %tmp.31;
+        symbol [ updated_text %updated_text.4 46 12 24 ];
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_44_20_47_9_stop:
+        goto @_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_44_9_49_9_if_end;
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_44_9_49_9_if_else_false:
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_47_16_49_9_start:
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroView.mc" 48 12 ]
+        %tmp.32 = lgetv %minutes.2;
+        symbol [ minutes %tmp.32 48 28 35 ];
+        symbol [ toString %tmp.33 48 36 44 ];
+        %tmp.33 = getv function %tmp.32 :toString;
+        %tmp.34 = invoke %tmp.32 %tmp.33();
+        %tmp.35 = ":";
+        %tmp.36 = add %tmp.34 %tmp.35;
+        lputv %updated_text.4 %tmp.36;
+        symbol [ updated_text %updated_text.4 48 12 24 ];
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_47_16_49_9_stop:
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_44_9_49_9_if_end:
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroView.mc" 51 8 ]
+        [ "_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_38_52_57_4_start" "_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_38_52_57_4_stop" ]
+        %seconds_two_digits.6 = local;
+        symbol [ seconds_two_digits %seconds_two_digits.6 51 12 30 ];
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_51_33_51_93_begin:
+        %tmp.37 = lgetv %seconds.3;
+        symbol [ seconds %tmp.37 51 34 41 ];
+        %tmp.38 = 9;
+        %tmp.39 = gt %tmp.37 %tmp.38;
+        bf %tmp.39 @_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_51_33_51_93_false;
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_51_33_51_93_true:
+        %tmp.40 = lgetv %seconds.3;
+        symbol [ seconds %tmp.40 51 49 56 ];
+        symbol [ toString %tmp.41 51 57 65 ];
+        %tmp.41 = getv function %tmp.40 :toString;
+        %tmp.42 = invoke %tmp.40 %tmp.41();
+        push %tmp.42;
+        goto @_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_51_33_51_93_end;
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_51_33_51_93_false:
+        %tmp.43 = "0";
+        %tmp.44 = lgetv %seconds.3;
+        symbol [ seconds %tmp.44 51 76 83 ];
+        symbol [ toString %tmp.45 51 84 92 ];
+        %tmp.45 = getv function %tmp.44 :toString;
+        %tmp.46 = invoke %tmp.44 %tmp.45();
+        %tmp.47 = add %tmp.43 %tmp.46;
+        push %tmp.47;
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_51_33_51_93_end:
+        %tmp.48 = phi [%tmp.39 @_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_51_33_51_93_begin] [%tmp.42 @_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_51_33_51_93_true] [%tmp.47 @_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_51_33_51_93_false] [%tmp.48 @_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_51_33_51_93_end];
+        lputv %seconds_two_digits.6 %tmp.48;
+        symbol [ seconds_two_digits %seconds_two_digits.6 51 12 30 ];
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroView.mc" 52 8 ]
+        %tmp.49 = lgetv %updated_text.4;
+        symbol [ updated_text %tmp.49 52 8 20 ];
+        %tmp.50 = lgetv %seconds_two_digits.6;
+        symbol [ seconds_two_digits %tmp.50 52 24 42 ];
+        %tmp.51 = add %tmp.49 %tmp.50;
+        lputv %updated_text.4 %tmp.51;
+        symbol [ updated_text %updated_text.4 52 8 20 ];
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroView.mc" 54 8 ]
+        symbol [ _timer %tmp.53 54 8 14 ];
+        %tmp.53 = getv ? :_timer;
+        symbol [ setText %tmp.54 54 15 22 ];
+        %tmp.54 = getv function %tmp.53 :setText;
+        %tmp.55 = lgetv %updated_text.4;
+        symbol [ updated_text %tmp.55 54 23 35 ];
+        invoke %tmp.53 %tmp.54(%tmp.55);
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroView.mc" 56 8 ]
+        symbol [ WatchUi %tmp.56 56 8 15 ];
+        %tmp.56 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.57 56 16 29 ];
+        %tmp.57 = getv function %tmp.56 :requestUpdate;
+        invoke %tmp.56 %tmp.57();
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_38_52_57_4_stop:
+    }
+    [ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroView.mc"; @line = 59; @symbol_functiondef = [set_title,59,13,22]; @symbol_param<0> = [title,59,23,28]; ]
+    function set_title(title) as Void {
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_59_38_62_4_start:
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroView.mc" 60 8 ]
+        symbol [ System %tmp.2 60 8 14 ];
+        %tmp.2 = getv ? :System;
+        symbol [ println %tmp.3 60 15 22 ];
+        %tmp.3 = getv function %tmp.2 :println;
+        %tmp.4 = lgetv %title;
+        symbol [ title %tmp.4 60 23 28 ];
+        invoke %tmp.2 %tmp.3(%tmp.4);
+[ "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroView.mc" 61 8 ]
+        symbol [ _title %tmp.6 61 8 14 ];
+        %tmp.6 = getv ? :_title;
+        symbol [ setText %tmp.7 61 15 22 ];
+        %tmp.7 = getv function %tmp.6 :setText;
+        %tmp.8 = lgetv %title;
+        symbol [ title %tmp.8 61 23 28 ];
+        invoke %tmp.6 %tmp.7(%tmp.8);
+_home_matyas_Documents_code_personal_Flowmodoro_source_FlowmodoroView_mc_59_38_62_4_stop:
+    }
+}
+[ @file = "/home/matyas/Documents/code/personal/Flowmodoro/source/FlowmodoroView.mc"; @line = 1; ]
+<init> {
+}
