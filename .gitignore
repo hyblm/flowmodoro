@@ -1,0 +1,7 @@
+# Per-worktree display credentials and agent socket link; never commit.
+/.devcontainer/.runtime/
+__pycache__/
+*.pyc
+# Private signing material must never be committed.
+*.pem
+*.der

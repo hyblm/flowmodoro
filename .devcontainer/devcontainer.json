@@ -1,0 +1,33 @@
+{
+  "name": "Flowmodoro · Connect IQ",
+  "build": { "dockerfile": "Dockerfile", "context": "..", "options": ["--platform=linux/amd64"] },
+  "remoteUser": "vscode",
+  "init": true,
+  "initializeCommand": ["bash", "scripts/prepare-host"],
+  "containerEnv": {
+    "DISPLAY": "${localEnv:DISPLAY}",
+    "XAUTHORITY": "/tmp/flowmodoro-Xauthority",
+    "SSH_AUTH_SOCK": "/tmp/flowmodoro-ssh-agent"
+  },
+  "remoteEnv": {
+    "SSH_AUTH_SOCK": "/tmp/flowmodoro-ssh-agent"
+  },
+  "runArgs": ["--platform=linux/amd64", "--publish=127.0.0.1:42817:42817", "--ipc=host"],
+  "mounts": [
+    "source=flowmodoro-garmin,target=/home/vscode/.Garmin,type=volume",
+    "source=flowmodoro-signing,target=/home/vscode/.config/garmin,type=volume",
+    "source=flowmodoro-cache,target=/home/vscode/.cache/flowmodoro,type=volume",
+    "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind,readonly",
+    "source=${localWorkspaceFolder}/.devcontainer/.runtime/Xauthority,target=/tmp/flowmodoro-Xauthority,type=bind,readonly",
+    "source=${localWorkspaceFolder}/.devcontainer/.runtime/ssh-agent,target=/tmp/flowmodoro-ssh-agent,type=bind,readonly"
+  ],
+  "postCreateCommand": ["bash", "scripts/container-post-create"],
+  "customizations": {
+    "vscode": {
+      "extensions": ["garmin.monkey-c"],
+      "settings": {
+        "monkeyC.developerKeyPath": "/home/vscode/.config/garmin/developer_key.der"
+      }
+    }
+  }
+}

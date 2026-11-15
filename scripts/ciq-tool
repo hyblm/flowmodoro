@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+sdk="$HOME/.Garmin/ConnectIQ/flowmodoro-sdk"
+if [[ ! -x "$sdk/bin/$(basename "$0")" ]]; then
+  echo 'Run ./scripts/setup-dev in the project terminal first.' >&2
+  exit 1
+fi
+exec "$sdk/bin/$(basename "$0")" "$@"

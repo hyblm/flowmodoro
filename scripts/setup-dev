@@ -1,0 +1,87 @@
+#!/usr/bin/env bash
+# Interactive, restartable onboarding. Never run from a noninteractive lifecycle hook.
+set -euo pipefail
+umask 077
+scripts="$(cd "$(dirname "$(realpath "$0")")" && pwd)"
+root="$(dirname "$scripts")"
+if [[ ! -t 0 ]]; then
+  echo 'Run ./scripts/setup-dev in an interactive devcontainer terminal.' >&2
+  exit 1
+fi
+if [[ "${1:-}" != '' && "${1:-}" != --login ]]; then
+  echo 'Usage: ./scripts/setup-dev [--login]' >&2
+  exit 1
+fi
+for command in connect-iq-sdk-manager-cli jq openssl patchelf; do
+  if ! command -v "$command" >/dev/null; then
+    echo "Missing $command. Open this project in its devcontainer first." >&2
+    exit 1
+  fi
+done
+sdk_version="$(jq -er '.sdk' "$root/toolchain.json")"
+manager_version="$(jq -er '.manager' "$root/toolchain.json")"
+# The image owns the manager binary. A toolchain change requires an image rebuild.
+if ! cmp -s "$root/toolchain.json" /opt/flowmodoro/toolchain.json; then
+  echo 'toolchain.json changed. Rebuild the devcontainer before running setup.' >&2
+  exit 1
+fi
+ciq="$HOME/.Garmin/ConnectIQ"
+mkdir -p "$ciq/Sdks" "$HOME/.config/garmin"
+chmod 700 "$HOME/.Garmin" "$ciq" "$HOME/.config/garmin"
+# Avoid stale download-location settings from a different username/container.
+printf '%s/\n' "$ciq" > "$ciq/sdkmanager-download-location.cfg"
+printf '\nSetting up SDK %s with manager %s.\n' "$sdk_version" "$manager_version"
+if [[ ! -f "$ciq/.flowmodoro-agreement-$sdk_version" ]]; then
+  connect-iq-sdk-manager-cli agreement view
+  read -r -p 'Have you read and do you accept the Garmin SDK agreement above? [y/N] ' answer
+  case "$answer" in
+    y|Y|yes|YES) connect-iq-sdk-manager-cli agreement accept ;;
+    *) echo 'Agreement not accepted. No SDK downloaded. You can rerun setup later.'; exit 1 ;;
+  esac
+  touch "$ciq/.flowmodoro-agreement-$sdk_version"
+fi
+if [[ ! -s "$ciq/token.json" || "${1:-}" == --login ]]; then
+  echo 'Open the localhost login link printed below in your normal HOST browser.'
+  echo 'Port 42817 is forwarded by the devcontainer; login will resume this script automatically.'
+  connect-iq-sdk-manager-cli login
+fi
+# The manager refreshes saved tokens as needed; expired/revoked credentials can
+# be renewed by rerunning this script with --login.
+connect-iq-sdk-manager-cli sdk download "$sdk_version"
+connect-iq-sdk-manager-cli sdk set "$sdk_version"
+connect-iq-sdk-manager-cli device download --manifest "$root/manifest.xml" --include-fonts
+sdk="$(connect-iq-sdk-manager-cli sdk current-path)"
+mirror="$("$scripts/prepare-sdk" "$sdk")"
+ln -sfn "$mirror" "$ciq/flowmodoro-sdk"
+# Garmin's VS Code extension also reads this path, so even its direct simulator
+# launch uses the patched mirror, not the unmodified downloaded executable.
+printf '%s/\n' "$ciq/flowmodoro-sdk" > "$ciq/current-sdk.cfg"
+[[ ! -f "$ciq/token.json" ]] || chmod 600 "$ciq/token.json"
+
+key="$HOME/.config/garmin/developer_key.der"
+if [[ ! -f "$key" ]]; then
+  echo 'Apps need a private signing key. Keep the same key for future app updates.'
+  read -r -p 'Generate a new key or import an existing DER key? [G/i] ' answer
+  temporary="$(mktemp "$HOME/.config/garmin/.key.XXXXXXXX")"
+  trap 'rm -f "$temporary"' EXIT
+  case "$answer" in
+    i|I)
+      read -r -p 'Path to your existing DER private key (inside the container): ' existing
+      openssl rsa -inform DER -in "$existing" -check -noout
+      cp "$existing" "$temporary"
+      ;;
+    ''|g|G)
+      openssl genpkey -algorithm RSA -pkeyopt rsa_keygen_bits:4096 |
+        openssl pkcs8 -topk8 -inform PEM -outform DER -nocrypt -out "$temporary"
+      ;;
+    *) echo 'Invalid choice. Rerun setup to finish.'; exit 1 ;;
+  esac
+  chmod 600 "$temporary"
+  mv "$temporary" "$key"
+  trap - EXIT
+fi
+openssl rsa -inform DER -in "$key" -check -noout
+chmod 600 "$key"
+printf '\nSetup complete. Signing key: %s\n' "$key"
+echo 'Back up this key outside Docker; deleting the signing volume destroys it.'
+echo 'Run make build, then make simulate. Reload the editor window if its SDK tools were already running.'

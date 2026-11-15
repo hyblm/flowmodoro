@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+set -euo pipefail
+# Display the simulator's native window on the host.
+if [[ -z "${DISPLAY:-}" ]]; then
+  echo 'DISPLAY is unset. Open the container from your Linux graphical session.' >&2
+  exit 1
+fi
+if command -v xdpyinfo >/dev/null && ! xdpyinfo >/dev/null 2>&1; then
+  echo 'Cannot access the host display. Reopen/recreate the devcontainer to refresh its display cookie.' >&2
+  exit 1
+fi
+if ! (echo > /dev/tcp/127.0.0.1/1234) 2>/dev/null; then
+  cache="$HOME/.cache/flowmodoro"
+  mkdir -p "$cache"
+  nohup simulator >"$cache/simulator.log" 2>&1 </dev/null &
+  pid=$!
+  for ((attempt=0; attempt<150; attempt++)); do
+    if ! kill -0 "$pid" 2>/dev/null; then
+      echo "Simulator exited. See $cache/simulator.log" >&2
+      exit 1
+    fi
+    if (echo > /dev/tcp/127.0.0.1/1234) 2>/dev/null; then
+      break
+    fi
+    sleep 0.1
+  done
+  if ! (echo > /dev/tcp/127.0.0.1/1234) 2>/dev/null; then
+    echo "Simulator did not become ready. See $cache/simulator.log" >&2
+    exit 1
+  fi
+fi
+exec monkeydo "${1:?Usage: simulate PROGRAM DEVICE}" "${2:?Missing device ID}"

@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+# Editor initializeCommand: runs on the HOST before the container is created.
+# Export only this display's cookie, never disable X server access control.
+set -euo pipefail
+root="$(dirname "$(dirname "$(realpath "$0")")")"
+runtime="$root/.devcontainer/.runtime"
+umask 077
+mkdir -p "$runtime"
+chmod 700 "$runtime"
+temporary="$(mktemp "$runtime/.Xauthority.XXXXXXXX")"
+trap 'rm -f "$temporary"' EXIT
+if [[ -z "${DISPLAY:-}" ]]; then
+  echo 'DISPLAY is unset. Start the editor from your Linux graphical session (X11/XWayland).' >&2
+  exit 1
+fi
+if [[ ! -d /tmp/.X11-unix ]]; then
+  echo 'No local X11/XWayland sockets found at /tmp/.X11-unix.' >&2
+  exit 1
+fi
+authority="${XAUTHORITY:-$HOME/.Xauthority}"
+if [[ -s "$authority" ]]; then
+  if ! command -v xauth >/dev/null; then
+    echo 'Install xauth on the host to forward your display cookie, then reopen the container.' >&2
+    exit 1
+  fi
+  # FamilyWild allows the cookie to work with a different container hostname.
+  xauth -f "$authority" nlist "$DISPLAY" |
+    awk '{print "ffff" substr($0, 5)}' |
+    xauth -f "$temporary" nmerge -
+fi
+chmod 600 "$temporary"
+mv -f "$temporary" "$runtime/Xauthority"
+trap - EXIT
+printf 'Prepared native display access for %s (no xhost changes).\n' "$DISPLAY"

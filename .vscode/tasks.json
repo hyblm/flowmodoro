@@ -1,0 +1,24 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Connect IQ: first-time setup",
+      "type": "shell",
+      "command": "./scripts/setup-dev",
+      "problemMatcher": []
+    },
+    {
+      "label": "Connect IQ: build",
+      "type": "shell",
+      "command": "make build",
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "Connect IQ: simulate",
+      "type": "shell",
+      "command": "make simulate",
+      "problemMatcher": []
+    }
+  ]
+}

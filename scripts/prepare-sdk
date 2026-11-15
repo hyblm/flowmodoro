@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# Produce a resource-complete SDK mirror without modifying Garmin's binaries.
+set -euo pipefail
+sdk="$(realpath "${1:?Usage: prepare-sdk SDK_DIRECTORY}")"
+freetype="${FREETYPE_LIBRARY:-/usr/lib/x86_64-linux-gnu/libfreetype.so.6}"
+base="$HOME/.cache/flowmodoro"
+mkdir -p "$base"
+# Include both binaries in the cache key, since the collision map depends on both.
+fingerprint="$(sha256sum "$sdk/bin/simulator" "$freetype" | sha256sum | cut -d ' ' -f1)"
+cache="$base/simulator-freetype-v3-$fingerprint"
+# Serialize setup in multiple editor windows.
+exec 9>"$base/prepare-sdk.lock"
+flock 9
+if [[ ! -f "$cache/.flowmodoro-patched" ]]; then
+  temporary="$(mktemp -d "$base/sdk.XXXXXXXX")"
+  trap 'rm -rf "$temporary"' EXIT
+  # The compiler locates resources via its JAR's canonical path and rewrites
+  # default.jungle. Copy rather than symlink so all writes stay in the mirror.
+  cp -a --reflink=auto "$sdk/." "$temporary/"
+  chmod -R u+w "$temporary"
+  nm -D --defined-only "$freetype" > "$temporary/freetype.symbols"
+  nm -D --defined-only "$sdk/bin/simulator" |
+    awk 'NR==FNR {names[$3]=1; next} $2 == "T" && ($3 in names) && $3 !~ /@/ {print $3, "ciq_private_" $3}' \
+      "$temporary/freetype.symbols" - > "$temporary/rename.map"
+  patchelf --rename-dynamic-symbols "$temporary/rename.map" "$temporary/bin/simulator"
+  touch "$temporary/.flowmodoro-patched"
+  mv -T "$temporary" "$cache"
+  trap - EXIT
+fi
+printf '%s\n' "$cache"

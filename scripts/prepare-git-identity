@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Export only the effective name/email for this workspace, not host credentials,
+# signing keys, credential helpers, or the rest of the host Git configuration.
+set -euo pipefail
+root="$(dirname "$(dirname "$(realpath "$0")")")"
+runtime="$root/.devcontainer/.runtime"
+umask 077
+mkdir -p "$runtime"
+chmod 700 "$runtime"
+temporary="$(mktemp "$runtime/.git-identity.XXXXXXXX")"
+trap 'rm -f "$temporary"' EXIT
+if command -v git >/dev/null; then
+  for field in name email; do
+    value="$(git -C "$root" config --get "user.$field" || true)"
+    if [[ -n "$value" ]]; then
+      git config --file "$temporary" "user.$field" "$value"
+    fi
+  done
+fi
+mv -f "$temporary" "$runtime/git-identity"
+trap - EXIT

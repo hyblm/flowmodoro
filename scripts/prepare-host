@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Editor initializeCommand: runs on the host, before container creation.
+set -euo pipefail
+scripts="$(dirname "$(realpath "$0")")"
+bash "$scripts/prepare-display"
+bash "$scripts/prepare-ssh-agent"
+bash "$scripts/prepare-git-identity"

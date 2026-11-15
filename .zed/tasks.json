@@ -1,0 +1,20 @@
+[
+  {
+    "label": "Connect IQ: first-time setup",
+    "command": "./scripts/setup-dev",
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false
+  },
+  {
+    "label": "Build",
+    "command": "make build",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false
+  },
+  {
+    "label": "Build and Run",
+    "command": "make simulate",
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false
+  }
+]

@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Keep lifecycle hooks as simple argv arrays: some editors lose quoting when
+# wrapping compound shell commands in another `sh -c`.
+set -euo pipefail
+sudo -n chown -R "$(id -u):$(id -g)" \
+  "$HOME/.Garmin" "$HOME/.config/garmin" "$HOME/.cache/flowmodoro"
+# The host initializer exports only this workspace's effective name/email.
+identity=".devcontainer/.runtime/git-identity"
+if [[ -r "$identity" ]]; then
+  for field in name email; do
+    value="$(git config --file "$identity" --get "user.$field" || true)"
+    if [[ -n "$value" ]]; then
+      git config --global "user.$field" "$value"
+    fi
+  done
+fi
+printf '\nRun ./scripts/setup-dev in an interactive terminal to finish setup.\n'

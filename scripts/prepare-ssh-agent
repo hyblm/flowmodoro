@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# Forward an agent socket, never private keys. Docker resolves this host-side
+# symlink when binding it into the container; no host paths leak into its env.
+set -euo pipefail
+root="$(dirname "$(dirname "$(realpath "$0")")")"
+runtime="$root/.devcontainer/.runtime"
+session="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
+umask 077
+mkdir -p "$runtime"
+chmod 700 "$runtime"
+temporary="$(mktemp "$runtime/.ssh-agent.XXXXXXXX")"
+trap 'rm -f "$temporary"' EXIT
+socket=''
+for candidate in "${SSH_AUTH_SOCK:-}" \
+  "$session/ssh-agent.socket" "$session/gcr/ssh" "$session/keyring/ssh"; do
+  if [[ -n "$candidate" && -S "$candidate" ]]; then
+    socket="$(realpath "$candidate")"
+    break
+  fi
+done
+if [[ -n "$socket" ]]; then
+  rm "$temporary"
+  ln -s "$socket" "$temporary"
+  printf 'Prepared host SSH-agent forwarding (no private keys mounted).\n'
+else
+  # A regular, empty file keeps the optional bind mount valid. SSH commands
+  # report an unavailable agent, but builds/simulator setup still work.
+  echo 'No SSH agent found; SSH-agent authentication will be unavailable.' >&2
+  echo 'Start/load your host agent, then recreate the container to enable forwarding.' >&2
+fi
+mv -Tf "$temporary" "$runtime/ssh-agent"
+trap - EXIT
