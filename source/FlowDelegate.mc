@@ -12,12 +12,12 @@ class FlowDelegate extends WatchUi.BehaviorDelegate {
 
     function initialize() {
         BehaviorDelegate.initialize();
-        _timer = new Timer.Timer(); 
+        _timer = new Timer.Timer();
     }
 
     function onSelect() as Boolean {
         switch (_state) {
-            case TimerState.Initial: 
+            case TimerState.Initial:
                 Attention.vibrate([]);
                 _time = Toybox.Time.now();
 
@@ -52,10 +52,12 @@ class FlowDelegate extends WatchUi.BehaviorDelegate {
                 break;
 
             case TimerState.BreakHover:
+                _state = TimerState.BreakPaused;
                 _view.set_btn_select("resume");
                 _timer.stop();
                 break;
             case TimerState.BreakPaused:
+                _state = TimerState.BreakHover;
                 _view.set_btn_select("pause");
                _timer.start(method(:tickDown), 1000, true);
                 break;
@@ -106,12 +108,13 @@ class FlowDelegate extends WatchUi.BehaviorDelegate {
             case TimerState.FocusHover:
             case TimerState.FocusPaused:
                 _view.set_primary_label("BREAK");
-                var duration = Toybox.Time.now().subtract(_time);
+                var duration = (_state == TimerState.FocusPaused) ? _time2 : Toybox.Time.now();
+                var duration = end.subtract(_time);
                 var seconds = duration.value();
                 _time = seconds / 4;
                _timer.start(method(:tickDown), 1000, true);
             case TimerState.Break:
-                _state = TimerState.BreakHover; 
+                _state = TimerState.BreakHover;
                 _view.set_btn_select("pause");
                 _view.set_btn_back("exit");
                 _view.set_btn_next("focus");
@@ -135,6 +138,7 @@ class FlowDelegate extends WatchUi.BehaviorDelegate {
         }
 
 
+        WatchUi.requestUpdate();
         return true;
     }
 
@@ -154,8 +158,7 @@ class FlowDelegate extends WatchUi.BehaviorDelegate {
     }
 
     function tickDown() {
-        if (_time) {
-            _time--;
+        if (--_time > 0) {
             _view.set_secondary_label(format_timer(_time));
             WatchUi.requestUpdate();
         } else {
@@ -170,11 +173,9 @@ class FlowDelegate extends WatchUi.BehaviorDelegate {
             if (Attention has :vibrate) {
                 var vibeData =
                 [
-                    new Attention.VibeProfile(50, 2000), // On for two seconds
-                    new Attention.VibeProfile(0, 2000),  // Off for two seconds
-                    new Attention.VibeProfile(50, 2000), // On for two seconds
-                    new Attention.VibeProfile(0, 2000),  // Off for two seconds
-                    new Attention.VibeProfile(50, 2000)  // on for two seconds
+                    new Attention.VibeProfile(50, 500), // On for two seconds
+                    new Attention.VibeProfile(0, 200),  // Off for two seconds
+                    new Attention.VibeProfile(50, 500), // On for two seconds
                 ];
                 Attention.vibrate(vibeData);
             }
