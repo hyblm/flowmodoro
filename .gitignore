@@ -1,3 +1,5 @@
+/build/
+/bin/
 # Per-worktree display credentials and agent socket link; never commit.
 /.devcontainer/.runtime/
 __pycache__/
