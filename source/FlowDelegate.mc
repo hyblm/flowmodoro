@@ -4,9 +4,12 @@ import Toybox.WatchUi;
 class FlowDelegate extends WatchUi.BehaviorDelegate {
 
     private var _timer;
-    private var _timer_value;
-    private var _time = 0;
-    private var _time2 = 0;
+    private var _focusStartedAt;
+    private var _pausedAt;
+    private var _breakTargetAt = 0;
+    private var _breakTargetSeconds = 0;
+    private var _breakNotified = false;
+    private var _hoverSecondsRemaining = 0;
     private var _view = getView();
     private var _state = TimerState.Initial;
 
@@ -18,187 +21,166 @@ class FlowDelegate extends WatchUi.BehaviorDelegate {
     function onSelect() as Boolean {
         switch (_state) {
             case TimerState.Initial:
-                Attention.vibrate([]);
-                _time = Toybox.Time.now();
-
+                startFocus();
+                break;
             case TimerState.Focus:
-                _state = TimerState.FocusHover;
-                _view.set_btn_select("pause");
-                _view.set_btn_back("exit");
-                _view.set_btn_next("break");
-                var focus_time = (Toybox.Time.now().subtract(_time)).value();
-                _view.set_secondary_label(format_timer(focus_time));
-                _timer_value = 5;
-                _timer.start(method(:unhover_focus), 1000, true);
+                showFocusControls();
                 break;
-
             case TimerState.FocusHover:
-                _state = TimerState.FocusPaused;
-                _time2 = Toybox.Time.now();
-                var duration = (_time2.subtract(_time)).value();
-                _view.set_secondary_label(format_timer(duration));
-                _view.set_btn_select("resume");
-                _timer.stop();
+                pauseFocus();
                 break;
-
             case TimerState.FocusPaused:
-                _state = TimerState.Focus;
-                var break_duration = (Toybox.Time.now().subtract(_time2));
-                _time = _time.add(break_duration);
-                _view.set_secondary_label("");
-                _view.set_btn_back("");
-                _view.set_btn_select("");
-                _view.set_btn_next("");
+                resumeFocus();
                 break;
-
             case TimerState.BreakHover:
-                _state = TimerState.BreakPaused;
-                _view.set_btn_select("resume");
-                _timer.stop();
+                startFocus();
                 break;
-            case TimerState.BreakPaused:
-                _state = TimerState.BreakHover;
-                _view.set_btn_select("pause");
-               _timer.start(method(:tickDown), 1000, true);
-                break;
-
-
         }
-        WatchUi.requestUpdate();
         return true;
     }
 
     function onBack() as Boolean {
-        switch (_state) {
-            case TimerState.Initial:
-            case TimerState.FocusHover:
-            case TimerState.FocusPaused:
-            case TimerState.BreakHover:
-            case TimerState.BreakPaused:
-                System.exit();
-            default:
-                break;
+        if (_state != TimerState.Focus) {
+            System.exit();
         }
-        WatchUi.requestUpdate();
         return true;
     }
 
-    function unhover_focus() as Void {
-        if (_timer_value > 0) {
-            _timer_value --;
-            var focus_time = (Toybox.Time.now().subtract(_time)).value();
-            _view.set_secondary_label(format_timer(focus_time));
-
-        } else {
-            _view.set_btn_select("");
-            _view.set_btn_back("");
-            _view.set_btn_next("");
-            _view.set_secondary_label("");
-            _state = TimerState.Focus;
-
-            _timer.stop();
-        }
-        WatchUi.requestUpdate();
-    }
-
     function onNextPage() as Boolean {
-        System.println("next pressed");
-        System.println(_state);
         switch (_state) {
             case TimerState.FocusHover:
             case TimerState.FocusPaused:
-                _view.set_primary_label("BREAK");
-                var duration = (_state == TimerState.FocusPaused) ? _time2 : Toybox.Time.now();
-                var duration = end.subtract(_time);
-                var seconds = duration.value();
-                _time = seconds / 4;
-               _timer.start(method(:tickDown), 1000, true);
-            case TimerState.Break:
-                _state = TimerState.BreakHover;
-                _view.set_btn_select("pause");
-                _view.set_btn_back("exit");
-                _view.set_btn_next("focus");
-                break;
-            case TimerState.BreakHover:
-            case TimerState.BreakPaused:
-                Attention.vibrate([]);
-                _state = TimerState.FocusHover;
-                _time = Toybox.Time.now();
-                _view.set_primary_label("FOCUS");
-                _view.set_btn_select("pause");
-                _view.set_btn_back("exit");
-                _view.set_btn_next("break");
-                var focus_time = (Toybox.Time.now().subtract(_time)).value();
-                _view.set_secondary_label(format_timer(focus_time));
-                _timer_value = 5;
-                _timer.start(method(:unhover_focus), 1000, true);
-                break;
-            default:
+                startBreak();
                 break;
         }
-
-
-        WatchUi.requestUpdate();
         return true;
     }
 
     function onPreviousPage() as Boolean {
-        System.println("previous page");
         return true;
-
     }
+
     function onMenu() as Boolean {
         WatchUi.pushView(new Rez.Menus.MainMenu(), new FlowMenuDelegate(), WatchUi.SLIDE_UP);
         return true;
     }
 
-    function tickUp() {
-        _time++;
-        _view.set_secondary_label(format_timer(_time));
+    function startFocus() as Void {
+        _timer.stop();
+        _focusStartedAt = Toybox.Time.now();
+        showFocusControls();
     }
 
-    function tickDown() {
-        if (--_time > 0) {
-            _view.set_secondary_label(format_timer(_time));
-            WatchUi.requestUpdate();
-        } else {
+    function showFocusControls() as Void {
+        _state = TimerState.FocusHover;
+        _hoverSecondsRemaining = 5;
+        _timer.start(method(:tickFocusHover), 1000, true);
+        updateViewForState();
+    }
+
+    function pauseFocus() as Void {
+        _timer.stop();
+        _pausedAt = Toybox.Time.now();
+        _state = TimerState.FocusPaused;
+        updateViewForState();
+    }
+
+    function resumeFocus() as Void {
+        var pauseDuration = Toybox.Time.now().subtract(_pausedAt);
+        _focusStartedAt = _focusStartedAt.add(pauseDuration);
+        _state = TimerState.Focus;
+        updateViewForState();
+    }
+
+    function startBreak() as Void {
+        _timer.stop();
+        var focusEnd = (_state == TimerState.FocusPaused) ? _pausedAt : Toybox.Time.now();
+        var targetSeconds = focusEnd.subtract(_focusStartedAt).value() / 4;
+        var now = Toybox.Time.now().value();
+        _breakTargetSeconds = targetSeconds;
+        _breakTargetAt = now + targetSeconds;
+        _breakNotified = false;
+        _state = TimerState.BreakHover;
+        _timer.start(method(:tickBreak), 1000, true);
+        tickBreak();
+    }
+
+    function tickFocusHover() as Void {
+        _hoverSecondsRemaining--;
+        if (_hoverSecondsRemaining <= 0) {
             _timer.stop();
-        _state = TimerState.Initial;
-            _view.set_btn_select("start");
-            _view.set_btn_back("");
-            _view.set_btn_next("");
-            _view.set_secondary_label("");
-            _view.set_primary_label("FOCUS");
-            WatchUi.requestUpdate();
+            _state = TimerState.Focus;
+        }
+        updateViewForState();
+    }
+
+    function tickBreak() as Void {
+        if (!_breakNotified && Toybox.Time.now().value() >= _breakTargetAt) {
+            _breakNotified = true;
             if (Attention has :vibrate) {
-                var vibeData =
-                [
-                    new Attention.VibeProfile(50, 500), // On for two seconds
-                    new Attention.VibeProfile(0, 200),  // Off for two seconds
-                    new Attention.VibeProfile(50, 500), // On for two seconds
-                ];
-                Attention.vibrate(vibeData);
+                vibrateBreakTarget();
             }
         }
+        updateViewForState();
     }
 
+    function vibrateBreakTarget() as Void {
+        Attention.vibrate([
+            new Attention.VibeProfile(40, 100),
+            new Attention.VibeProfile(0, 40),
+            new Attention.VibeProfile(50, 100),
+        ]);
+    }
+
+    function updateViewForState() as Void {
+        var primary = "FOCUS";
+        var secondary = "";
+        var selectLabel = "";
+        var backLabel = "";
+        var nextLabel = "";
+        var progress = null;
+        var status = "";
+
+        switch (_state) {
+            case TimerState.Initial:
+                selectLabel = "start";
+                break;
+            case TimerState.FocusHover:
+            case TimerState.FocusPaused:
+                var focusEnd = (_state == TimerState.FocusPaused) ? _pausedAt : Toybox.Time.now();
+                secondary = format_timer(focusEnd.subtract(_focusStartedAt).value());
+                selectLabel = (_state == TimerState.FocusPaused) ? "resume" : "pause";
+                if (_state == TimerState.FocusPaused) { status = "Paused"; }
+                backLabel = "exit";
+                nextLabel = "break";
+                break;
+            case TimerState.BreakHover:
+                primary = "BREAK";
+                var remaining = _breakTargetAt - Toybox.Time.now().value();
+                secondary = (remaining < 0) ? "+" + format_timer(-remaining) : format_timer(remaining);
+                selectLabel = "focus";
+                backLabel = "exit";
+                progress = (_breakTargetSeconds > 0) ? 1.0 - remaining.toFloat() / _breakTargetSeconds : 1.0;
+                if (progress > 1.0) { progress = 1.0; }
+                if (progress < 0.0) { progress = 0.0; }
+                break;
+        }
+
+        _view.present(primary, secondary, selectLabel, backLabel, nextLabel, progress, status);
+    }
 }
 
 function format_timer(total_seconds as Toybox.Lang.Number) as Toybox.Lang.String {
-    var hours = total_seconds / (3600);
-    var minutes = (total_seconds % (3600)) / 60;
+    var hours = total_seconds / 3600;
+    var minutes = (total_seconds % 3600) / 60;
     var seconds = total_seconds % 60;
-
-    var updated_text;
-        if (hours) {
-        var minutes_two_digits = (minutes > 9) ? minutes.toString() : "0" + minutes.toString();
-        updated_text = hours.toString() + ":" + minutes_two_digits;
-        } else {
-        updated_text =  minutes.toString() + ":";
-        }
-
-    var seconds_two_digits = (seconds > 9) ? seconds.toString() : "0" + seconds.toString();
-    updated_text += seconds_two_digits;
-
-    return updated_text;
+    var text;
+    if (hours > 0) {
+        var minutesTwoDigits = (minutes > 9) ? minutes.toString() : "0" + minutes.toString();
+        text = hours.toString() + ":" + minutesTwoDigits + ":";
+    } else {
+        text = minutes.toString() + ":";
+    }
+    var secondsTwoDigits = (seconds > 9) ? seconds.toString() : "0" + seconds.toString();
+    return text + secondsTwoDigits;
 }

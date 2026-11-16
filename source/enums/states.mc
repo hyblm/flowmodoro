@@ -4,9 +4,6 @@ class TimerState {
         Focus,
         FocusHover,
         FocusPaused,
-        Break,
         BreakHover,
-        BreakPaused,
-        ExitDialog,
     }
 }
